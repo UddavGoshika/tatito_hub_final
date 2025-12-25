@@ -1,0 +1,4643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tatito Projects – Futuristic UI</title>
+    <link rel="icon" type="image/x-icon" href="/logoo.ico">
+
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+    /* ================= RESET ================= */
+  </style>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+  <!-- <canvas id="bg-canvas"></canvas> -->
+<!-- =================  REFINED HEADER  ================= -->
+<header class="header">
+  <div class="header-inner">
+
+    <!-- LOGO (now inside nav-container) -->
+    <a href="#home" class="brand" onclick="switchPage('home')">
+      <img src="logoo.png" alt="Tatito Logo" class="brand-logo">
+      <div class="brand-text">
+        <h1>Tatito Projects</h1>
+        <p>- we deliver more <br>than just expect</p>
+      </div>
+    </a>
+
+    <!-- NAV CONTAINER -->
+    <div class="nav-container">
+      <!-- Utility Bar -->
+      <div class="utility-bar">
+        <div class="announce-bar">
+          <p>🚀 Welcome to Tatito Projects — Voice-First • AI-Driven • Web 3.0 Platform ❄️✨</p>
+        </div>
+
+        <div class="utility-actions">
+          <!-- <button class="utility-btn" onclick="document.body.classList.toggle('light')" title="Toggle theme">☀</button> -->
+          <button class="font-decrease" aria-label="Decrease font size">A−</button>
+          <button class="font-increase" aria-label="Increase font size">A+</button>
+          <select class="language-selector">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="es">Spanish</option>
+            <option value="ml">Malayalam</option>
+            <option value="ta">Tamil</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Main Nav -->
+      <nav class="main-nav">
+        <div class="nav-links">
+          <a href="#home" class="nav-link active" onclick="switchPage('home')">Home</a>
+          <a href="#services" class="nav-link" onclick="switchPage('services')">Services</a>
+          <a href="#about" class="nav-link" onclick="switchPage('about')">About</a>
+          <a href="#franchise" class="nav-link" onclick="switchPage('franchise')">Franchise</a>
+        </div>
+
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search AI tools...">
+        </div>
+
+        <div class="icon-group">
+
+          
+        <button class="icon-btn notify" onclick="toggleNotify()" aria-label="Notifications">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.73 21a2 2 0 01-3.46 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="ndot"></span>
+        </button>
+
+
+          <button class="icon-btn" onclick="toggleFilter()" aria-label="Filter">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <button class="icon-btn" onclick="switchPage('cart')" aria-label="Cart">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M3 3h2l2.4 11.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.6L21 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+              <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+            </svg>
+          </button>
+          <button class="icon-btn user-icon" onclick="switchPage('login')" aria-label="Login">
+            <svg width="22" height="22" viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Sub Nav -->
+      <div class="sub-nav">
+        <a href="#"><img src="edverse.png" class="subnavlogo">Tatito Edverse ↗</a>
+        <a href="#"><img src="carrer.png" class="subnavlogo">Tatito Career Hub ↗</a>
+        <a href="#"><img src="nexus.png" class="subnavlogo">Tatito Nexus ↗</a>
+        <a href="#"><img src="civic.png" class="subnavlogo">Tatito Civic One ↗</a>
+        <a href="#"><img src="health.png" class="subnavlogo">Tatito Health+ ↗</a>
+        <a href="#"><img src="herologo.png" class="subnavlogo">Tatito Fashions ↗</a>
+
+        <div class="grid">
+          <div class="quick-box" onclick="goToPage('page1.html')"><span>Order Food<br>& Groceries
+</span></div>
+          <div class="quick-box" onclick="goToPage('services.html')"><span>Real Estate
+</span></div>
+          <div class="quick-box" onclick="goToPage('about.html')"><span>Jobs&Internship
+</span></div>
+          <div class="quick-box" onclick="goToPage('contact.html')"><span>Local Services
+</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+  <!-- ABOUT PAGE -->
+  <!-- <section id="about" class="page">
+    <div class="about-container">
+      <div class="about-header reveal">
+        <h2>About Tatito Projects</h2>
+        <p>
+      Tatito Projects is a forward-thinking technology company specializing in
+      high-performance mobile applications, games, and digital platforms.
+      Founded by passionate technologists, we are driven by innovation and a
+      commitment to delivering impactful digital solutions.
+    </p>
+
+    <p>
+      With a multidisciplinary team of developers, designers, and strategists,
+      we blend cutting-edge technology with deep user insight to build products
+      that captivate audiences and deliver measurable business value.
+    </p>
+      </div>
+
+      <div class="about-card reveal">
+        <h3>Who We Are</h3>
+        <p>
+          Tatito Projects is a dynamic and innovation-driven technology company
+          specializing in high-performance mobile applications and engaging games.
+        </p>
+      </div>
+
+      <div class="about-card reveal delay-1">
+        <h3>Our History</h3>
+        <p>
+          With over five years of strong industry experience, our team delivers
+          tailored solutions that redefine industry standards.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card reveal delay-2">
+          <h3>Our Vision</h3>
+          <p>
+            To become a preeminent leader in app and game development, renowned for
+            cutting-edge solutions and transformative digital experiences.
+          </p>
+        </div>
+        <div class="about-card reveal delay-3">
+          <h3>Our Mission</h3>
+          <p>
+            To empower businesses and individuals with innovative digital
+            solutions that push boundaries and unlock full potential.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    
+  </section> -->
+
+
+<!-- ABOUT PAGE -->
+<section id="about" class="page">
+  
+  <!-- INTRO -->
+<!--    
+  <div class="about-container">
+    <div class="about-header reveal">
+      <h2>About Tatito Projects</h2>
+      <p>
+        Tatito Projects is a forward-thinking technology company specializing in
+        high-performance mobile applications, games, and digital platforms.
+        Founded by passionate technologists, we are driven by innovation and a
+        commitment to delivering impactful digital solutions.
+      </p>
+      <p>
+        With a multidisciplinary team of developers, designers, and strategists,
+        we blend cutting-edge technology with deep user insight to build products
+        that captivate audiences and deliver measurable business value.
+      </p>
+    </div>
+
+    <div class="about-card reveal">
+      <h3>Who We Are</h3>
+      <p>
+        Tatito Projects is a dynamic and innovation-driven technology company
+        specializing in high-performance mobile applications and engaging games.
+      </p>
+    </div>
+
+    <div class="about-card reveal delay-1">
+      <h3>Our History</h3>
+      <p>
+        With over five years of strong industry experience, our team delivers
+        tailored solutions that redefine industry standards.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card reveal delay-2">
+        <h3>Our Vision</h3>
+        <p>
+          To become a preeminent leader in app and game development, renowned for
+          cutting-edge solutions and transformative digital experiences.
+        </p>
+      </div>
+
+      <div class="about-card reveal delay-3">
+        <h3>Our Mission</h3>
+        <p>
+          To empower businesses and individuals with innovative digital
+          solutions that push boundaries and unlock full potential.
+        </p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- HERO -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-badge">
+          <i class="fas fa-star"></i>
+          Trusted by 1000+ Clients Worldwide
+        </div>
+
+        <h1 class="hero-title">Transforming Ideas into Digital Reality</h1>
+
+        <p class="hero-subtitle">
+          We are Tatito Projects — a dynamic technology company specializing in
+          high-performance mobile apps, immersive games, and transformative
+          digital experiences that captivate audiences and drive business success.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Projects Delivered</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Expert Team Members</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">95%</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="section">
+    <div class="container">
+      <div class="about-grid fade-in">
+
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
+            alt="Tatito Team"
+          />
+        </div>
+
+        <div class="about-content">
+          <h3>Our Story</h3>
+
+          <p>
+            Founded by a team of passionate tech enthusiasts, Tatito Projects
+            began with a simple yet powerful vision: to transform ambitious ideas
+            into intuitive and impactful digital experiences. What started as a
+            tele-calling project in Texas has evolved into a comprehensive
+            technology solutions provider.
+          </p>
+
+          <p>
+            Today, we operate across multiple domains — from real estate and
+            education to finance and philanthropy — delivering tailored solutions
+            that prioritize excellence and drive real-world impact.
+          </p>
+
+          <div class="highlight-box">
+            <strong>Our Journey:</strong>
+            Tele-calling → Real Estate → Engineering → Digital Marketing →
+            Education → Software Development → Game Development → AI Solutions
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION & MISSION -->
+  <!-- <section class="section vision-mission">
+    <div class="container">
+
+      <div class="section-header fade-in">
+        <h2 class="section-title">Vision & Mission</h2>
+        <p class="section-subtitle">
+          Our guiding principles that drive every decision and innovation
+        </p>
+      </div>
+
+      <div class="vm-grid fade-in">
+
+        <div class="vm-card">
+          <div class="vm-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 class="vm-title">Our Vision</h3>
+          <p>
+            To become the preeminent leader in the app and game development
+            industry, renowned for our cutting-edge solutions, exceptional
+            customer service, and a driving passion for creating transformative
+            digital experiences that inspire and enable our clients to achieve
+            their goals.
+          </p>
+        </div>
+
+        <div class="vm-card">
+          <div class="vm-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 class="vm-title">Our Mission</h3>
+          <p>
+            At the heart of Tatito Projects lies an unwavering commitment to
+            empowering our clients with innovative digital solutions that push
+            the boundaries of what's possible. We strive to be the trusted
+            partner that helps businesses and individuals unlock their full
+            potential through the power of technology.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section> -->
+
+
+
+    <section class="section vision-mission">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Vision & Mission</h2>
+                <p class="section-subtitle">Our guiding principles that drive every decision and innovation</p>
+            </div>
+            
+            <div class="vm-grid fade-in">
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="vm-title">  Our Vision</h3>
+                    <p>To become the preeminent leader in the app and game development industry, renowned for our cutting-edge solutions, exceptional customer service, and a driving passion for creating transformative digital experiences that inspire and enable our clients to achieve their goals.</p>
+                </div>
+                
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="vm-title">Our Mission</h3>
+                    <p>At the heart of Tatito Projects lies an unwavering commitment to empowering our clients with innovative digital solutions that push the boundaries of what's possible. We strive to be the trusted partner that helps businesses and individuals unlock their full potential through the power of technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+  <!-- CORE VALUES -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-header fade-in">
+        <h2 class="section-title">Our Core Values</h2>
+        <p class="section-subtitle">
+          The principles that define who we are and how we work
+        </p>
+      </div>
+
+      <div class="values-grid fade-in">
+
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>Innovation</h3>
+          <p>
+            We constantly push boundaries and explore new technologies to
+            deliver cutting-edge solutions.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Collaboration</h3>
+          <p>
+            We believe in the power of teamwork and partnership to achieve
+            extraordinary results.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Integrity</h3>
+          <p>
+            Trust, transparency, and ethical practices are at the core of
+            everything we do.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Excellence</h3>
+          <p>
+            We are committed to delivering the highest quality in every project
+            we undertake.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+
+      <div class="section-header fade-in">
+        <h2 class="section-title">Why Choose Tatito Projects?</h2>
+        <p class="section-subtitle">
+          What sets us apart in the digital landscape
+        </p>
+      </div>
+
+      <div class="about-grid fade-in">
+
+        <div class="about-content">
+          <h3>Expertise That Delivers Results</h3>
+          <p>
+            Our team comprises seasoned professionals with 5+ years of experience
+            in software product development, bringing deep expertise across
+            diverse industries including education, environmental sustainability,
+            finance, and philanthropy.
+          </p>
+
+          <ul>
+            <li><strong>In-Depth Understanding:</strong> Blockchain, AI, emerging tech</li>
+            <li><strong>Tailored Solutions:</strong> Built for your exact goals</li>
+            <li><strong>Reliability:</strong> Transparent & predictable delivery</li>
+            <li><strong>End-to-End Support:</strong> Concept → Launch → Scale</li>
+          </ul>
+        </div>
+
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop"
+            alt="Why Choose Us"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-header fade-in">
+        <h2 class="section-title">Meet Our Leadership</h2>
+        <p class="section-subtitle">
+          The visionaries driving innovation at Tatito Projects
+        </p>
+      </div>
+
+      <div class="team-grid fade-in">
+
+        <div class="team-card">
+          <div class="team-image"><i class="fas fa-user-tie"></i></div>
+          <div class="team-info">
+            <h3 class="team-name">Manoj Kumar Vanam</h3>
+            <p class="team-role">Founder & CEO</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-image"><i class="fas fa-code"></i></div>
+          <div class="team-info">
+            <h3 class="team-name">Mohan Reddy</h3>
+            <p class="team-role">Senior Java Architect</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-image"><i class="fas fa-mobile-alt"></i></div>
+          <div class="team-info">
+            <h3 class="team-name">Krishnamaya</h3>
+            <p class="team-role">Flutter Lead Developer</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-image"><i class="fas fa-paint-brush"></i></div>
+          <div class="team-info">
+            <h3 class="team-name">Soumya</h3>
+            <p class="team-role">UI/UX Design Lead</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Ready to Transform Your Ideas into Reality?</h2>
+        <p>
+          Join us in creating a future where technology and innovation know no limits.
+        </p>
+        <a href="#contact" class="cta-button">
+          <span>Start Your Project Today</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+
+
+<script>
+  // Enable JS-safe rendering
+  document.body.classList.remove('no-js');
+
+  // Intersection Observer for reveal + fade-in animations
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -80px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, observerOptions);
+
+  // Observe BOTH classes
+  document.querySelectorAll('.fade-in, .reveal').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Subtle parallax for About Hero
+  window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.about-hero');
+    if (!hero) return;
+
+    const scrolled = window.scrollY;
+    hero.style.transform = `translateY(${scrolled * 0.15}px)`;
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="home" class="page active">
+
+    <!-- 1.  HERO  (your existing code – do NOT touch) -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="hero-eyebrow">A Living Platform</span>
+        <h1 class="hero-title">
+          One ecosystem<br>
+          <span>for everything</span>
+        </h1>
+        <p class="hero-subtitle">
+          Learning, careers, health and intelligence — unified into one thoughtfully designed digital system.
+        </p>
+        <button class="hero-btn">Explore Platform →</button>
+      </div>
+      <div class="hero-visual">
+        <!-- <img src="herologo.png" alt="Feather" class="herobimage"> -->
+         <img src="mix_logo.png" class="herobimage">
+      </div>
+    </section>
+
+    <!-- 2.  TATITO ECO LIVING SYSTEM  (your existing code – do NOT touch) -->
+   <section class="ecosystem-story">
+  <h2 class="eco-heading">The Tatito Living Ecosystem</h2>
+    <!-- <div class="eco-line"></div> -->
+
+    <!-- NODE 1: Tatito Nexus (Centered) -->
+   <section class="nexus-showcase">
+  <div class="nexus-card">
+
+    <!-- glowing core -->
+    <div class="nexus-glow"></div>
+
+    <!-- header -->
+    <div class="nexus-header">
+      <img src="feather.png" alt="Tatito Nexus" class="nexus-feather">
+      <h1>Tatito Nexus</h1>
+      <p>The intelligence core that unifies every Tatito experience</p>
+    </div>
+
+    <!-- feature pills -->
+    <ul class="nexus-pills">
+      <li><i>🔐</i> Single Sign-On</li>
+      <li><i>🤖</i> AI Dashboard</li>
+      <li><i>⚡</i> Real-time Sync</li>
+      <li><i>⛓️</i> Blockchain ID</li>
+    </ul>
+
+    <!-- 3-D rotating showcase -->
+    <div class="showcase-3d">
+      <div class="showcase-track" id="showcaseTrack">
+          <h2>Upcoming Projects</h2>
+        <!-- slide 1 -->
+        <article class="showcase-slide active" data-project="edverse">
+
+          <div class="slide-visual">
+            <img src="edverse.png" alt="Tatito Edverse">
+          </div>
+          <div class="slide-body">
+            <h2>Tatito Edverse</h2>
+            <p>Future-ready digital education & learning ecosystems</p>
+            <ul>
+              <li>AI-powered adaptive learning</li>
+              <li>Virtual classrooms & LMS</li>
+              <li>Global educator marketplace</li>
+              <li>Certification & skill tracking</li>
+            </ul>
+            <a class="slide-cta" href="#edverse">Explore Edverse →</a>
+          </div>
+        </article>
+
+        <!-- slide 2 -->
+        <article class="showcase-slide" data-project="fashions">
+          <div class="slide-visual">
+            <img src="fashion.jpeg" alt="Tatito Fashions">
+          </div>
+          <div class="slide-body">
+            <h2>Tatito Fashions</h2>
+            <p>Identity, creativity & digital expression</p>
+            <ul>
+              <li>Digital wardrobe & style AI</li>
+              <li>Designer marketplace & AR try-on</li>
+              <li>NFT fashion & collectibles</li>
+              <li>Subscriptions & creator revenue</li>
+            </ul>
+            <a class="slide-cta" href="#fashions">Explore Fashions →</a>
+          </div>
+        </article>
+
+        <!-- slide 3 -->
+        <article class="showcase-slide" data-project="career">
+          <div class="slide-visual">
+            <img src="carrer.png" alt="Career Hub">
+          </div>
+          <div class="slide-body">
+            <h2>Tatito Career Hub</h2>
+            <p>Skills, jobs & career intelligence in one place</p>
+            <ul>
+              <li>AI resume & portfolio builder</li>
+              <li>Verified skill credentials</li>
+              <li>Job matching & mentorship</li>
+              <li>Career analytics dashboard</li>
+            </ul>
+            <a class="slide-cta" href="#career">Explore Career Hub →</a>
+          </div>
+        </article>
+
+        <!-- slide 4 -->
+        <article class="showcase-slide" data-project="advocate">
+          <div class="slide-visual">
+          <img src="eadvocate.png" alt="Edverse Courses">
+          </div>
+          <div class="slide-body">
+            <h2>Tatito E-Advocate</h2>
+            <p>Digital justice, legal access & transparency</p>
+            <ul>
+              <li>Online legal consultation</li>
+              <li>Case tracking & documentation</li>
+              <li>AI legal guidance</li>
+              <li>Secure digital records</li>
+            </ul>
+            <a class="slide-cta" href="#advocate">Explore E-Advocate →</a>
+          </div>
+        </article>
+
+        <!-- slide 5 -->
+        <article class="showcase-slide" data-project="civic">
+          <div class="slide-visual">
+          <img src="civic.png" alt="Edverse Courses">
+          </div>
+          <div class="slide-body">
+            <h2>Tatito Civic One</h2>
+            <p>Citizen engagement, governance & public services</p>
+            <ul>
+              <li>Digital identity for citizens</li>
+              <li>Smart governance tools</li>
+              <li>Public feedback & voting</li>
+              <li>Transparent civic records</li>
+            </ul>
+            <a class="slide-cta" href="#civic">Explore Civic One →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- controls -->
+    <div class="showcase-controls">
+      <button class="ctrl-btn prev" aria-label="Previous">‹</button>
+      <div class="ctrl-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+      </div>
+      <button class="ctrl-btn next" aria-label="Next">›</button>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+      
+      
+      
+      
+      </div>
+    </div>
+    <!-- NODE 2: Tatito Edverse (Text LEFT + Slideshow RIGHT) -->
+
+
+
+  <div class="eco-timeline">
+        <div class="eco-line"></div>
+
+    <div class="eco-step" data-index="1">
+      <div class="eco-node"></div>
+      <div class="eco-content reverse">
+        <div class="eco-feather edverse">
+          <h3>          <img src="feather.png" class="feather-img" alt="feather" />
+          Tatito Edverse</h3>
+          <p>A learning universe that adapts to your curiosity, skills, and growth.</p>
+          <ul class="eco-points">
+            <li>10,000+ courses & certifications</li>
+            <li>Adaptive learning paths with AI mentoring</li>
+            <li>Institute & corporate partnerships</li>
+            <li>Revenue: Enrollments, subscriptions, white-label</li>
+          </ul>
+          <a href="#" class="eco-learn">Learn More ➡️</a>
+        </div>
+
+        <!-- Slideshow on the RIGHT -->
+        <div class="eco-slideshow">
+          <img src="https://s3-alpha.figma.com/hub/file/5515046964/c7728c4d-dfbd-435f-b693-e653be6e5845-cover.png" alt="Edverse Dashboard" class="active">
+          <img src="https://s3-alpha.figma.com/hub/file/2155305221543901663/f3b6586b-39f8-454a-baa3-291a0c354467-cover.png" alt="Edverse Courses">
+          <img src="https://multipurposethemes.com/wp-content/uploads/2025/04/Education-LMS-Dashboard-Admin-Template-2-1200x675.jpg" alt="Edverse LMS">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/6e6c3c197319933.Y3JvcCw4MDgsNjMyLDAsMA.jpg" alt="Edverse Analytics">
+        </div>
+      </div>
+    </div>
+
+    <!-- NODE 3: Career Hub (Slideshow LEFT + Text RIGHT) -->
+    <div class="eco-step" data-index="2">
+      <div class="eco-node"></div>
+      <div class="eco-content reverse">
+        <!-- Slideshow on the LEFT -->
+        <div class="eco-slideshow">
+          <img src="https://cdn.dribbble.com/userupload/9111466/file/original-2758f4e5deee5b733491e49180b035cf.png?resize=1600x1200" alt="Career Hub Dashboard" class="active">
+          <img src="https://cdn.dribbble.com/userupload/18674092/file/original-bdab3d46cb5951cdff1b2c06dbdb47e6.jpg?resize=1600x1200" alt="Job Matching">
+          <img src="https://media.bizj.us/view/img/12279303/teal-home-dashboard*900xx2880-1620-0-4.png" alt="Career Growth">
+        </div>
+
+        <div class="eco-feather career">
+          <h3>          <img src="feather.png" class="feather-img" alt="feather" />
+Career Hub</h3>
+          <p>Guiding learning into meaningful career opportunities and real-world impact.</p>
+          <ul class="eco-points">
+            <li>Job matching with skill-gap analysis</li>
+            <li>Resume builder & interview prep AI</li>
+            <li>Direct employer connections</li>
+            <li>Franchise revenue from placements & training</li>
+          </ul>
+          <a href="#" class="eco-learn">Learn More ➡️</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NODE 4: Health+ (Text LEFT + Slideshow RIGHT) -->
+    <div class="eco-step" data-index="3">
+      <div class="eco-node"></div>
+      <div class="eco-content reverse">
+        <div class="eco-feather health">
+          <h3>          <img src="feather.png" class="feather-img" alt="feather" />
+Tatito Health+</h3>
+          <p>Human-centered health intelligence designed for calm, clarity, and care.</p>
+          <ul class="eco-points">
+            <li>Personal health records & telemedicine</li>
+            <li>AI symptom checker & wellness plans</li>
+            <li>Clinic & pharmacy network integration</li>
+            <li>Subscription + consultation revenue</li>
+          </ul>
+          <a href="#" class="eco-learn">Learn More ➡️</a>
+        </div>
+
+        <!-- Slideshow on the RIGHT -->
+        <div class="eco-slideshow">
+          <img src="https://ideausher.com/wp-content/uploads/2022/11/Telemedicine-App-Development.webp" alt="Health+ Dashboard" class="active">
+          <img src="https://cdn.dribbble.com/userupload/37443735/file/original-95234d7802d1aec5d60aed5c64a8a89e.png?resize=1600x1200" alt="Telemedicine View">
+          <img src="https://s3-alpha.figma.com/hub/file/3541259140/e6cba04e-922e-44c2-9e56-e869f195f20a-cover.png" alt="Wellness Plans">
+        </div>
+      </div>
+    </div>
+
+    <!-- NODE 5: Civic One (Slideshow LEFT + Text RIGHT) -->
+    <div class="eco-step" data-index="4">
+      <div class="eco-node"></div>
+      <div class="eco-content reverse">
+        <!-- Slideshow on the LEFT -->
+        <div class="eco-slideshow">
+          <img src="https://www.expertappdevs.com/sitebucket/blog/civicsync-dashboard-example.webp" alt="Civic One Dashboard" class="active">
+          <img src="https://thumbs.dreamstime.com/b/digital-dashboard-interface-showcasing-e-governance-portal-design-features-include-global-maps-data-visualization-elements-like-389877931.jpg" alt="Citizen Services">
+          <img src="https://thumbs.dreamstime.com/b/digital-dashboard-featuring-e-governance-interface-sleek-dark-themed-layout-screen-displays-network-389879440.jpg" alt="e-Governance Portal">
+        </div>
+
+        <div class="eco-feather civic">
+          <h3>          <img src="feather.png" class="feather-img" alt="feather" />
+Tatito Civic One</h3>
+          <p>Digital civic infrastructure built on trust, transparency, and inclusion.</p>
+          <ul class="eco-points">
+            <li>Digital governance & citizen services</li>
+            <li>Transparent complaint & feedback system</li>
+            <li>e-Voting & community participation</li>
+            <li>Govt & NGO partnership model</li>
+          </ul>
+          <a href="#" class="eco-learn">Learn More ➡️</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NODE 6: Tatito Fashions (Text LEFT + Slideshow RIGHT) -->
+    <div class="eco-step" data-index="5">
+      <div class="eco-node"></div>
+      <div class="eco-content reverse">
+        <div class="eco-feather fashion">
+          <h3>          <img src="feather.png" class="feather-img" alt="feather" />
+Tatito Fashions</h3>
+          <p>Identity, creativity, and digital expression in a connected world.</p>
+          <ul class="eco-points">
+            <li>Digital wardrobe & style AI</li>
+            <li>Designer marketplace & AR try-on</li>
+            <li>NFT fashion & digital collectibles</li>
+            <li>Revenue via sales, subscriptions & drops</li>
+          </ul>
+          <a href="#" class="eco-learn">Learn More ➡️</a>
+        </div>
+
+        <!-- Slideshow on the RIGHT -->
+        <div class="eco-slideshow">
+          <img src="https://3dlook.ai/wp-content/uploads/2021/09/ar3.jpg" alt="AR Try-On" class="active">
+          <img src="https://thumbs.dreamstime.com/b/ar-fitting-rooms-augmented-reality-room-app-lets-users-virtually-try-clothing-accessories-making-online-299978766.jpg" alt="Virtual Fitting">
+          <img src="https://cartcoders.com/blog/wp-content/uploads/2025/04/Virtual-Try-On-Clothes-How-to-Integrate-AR-into-Your-Shopify-Apparel-Store2.webp" alt="Digital Wardrobe">
+          <img src="https://static-www.adweek.com/wp-content/uploads/2023/06/Valentino-Wanna-Wear-App-AR-Screenshots-Hero.png" alt="Fashion Marketplace">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Slideshow JavaScript (keep this once at the bottom of your page) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const slideshows = document.querySelectorAll('.eco-slideshow');
+
+  slideshows.forEach(slideshow => {
+    const images = slideshow.querySelectorAll('img');
+    let current = 0;
+
+    function nextSlide() {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }
+
+    if (images.length > 0) {
+      images[0].classList.add('active');
+      setInterval(nextSlide, 5000); // Smooth cycle every 5 seconds
+    }
+  });
+});
+</script>
+    <!-- 3.  SERVICES  (deep, premium cards) -->
+      <div class="containerservices">
+        <header class="section-header">
+          <h2>Our Services</h2>
+          <p>End-to-end digital solutions engineered for scale, performance, and human experience.</p>
+        </header>
+
+        <div class="service-grid">
+          <article class="service-tile">
+            <h3>🎙️International Voice Process</h3>
+            <span class="tag">Medicare Verification</span>
+            <ul>
+              <li>US diabetic-patient verification via script-driven CRM</li>
+              <li>PCI-DSS compliant workflows & real-time QA</li>
+              <li>Revenue: up to $2,000 / seat / month</li>
+            </ul>
+            <a class="tile-cta">Learn more →</a>
+          </article>
+
+          <article class="service-tile">
+            <h3>📊Non-Voice Data Entry</h3>
+            <span class="tag">Growth Fund & Telecom</span>
+            <ul>
+              <li>5,000 offline forms processed in 20 days</li>
+              <li>₹22 / form ⇒ ₹1.25 L monthly recurring</li>
+              <li>Telecom projects: $2,000 fixed payout</li>
+            </ul>
+            <a class="tile-cta">Learn more →</a>
+          </article>
+
+          <article class="service-tile">
+            <h3>💻Software Development</h3>
+            <span class="tag">End-to-End Delivery</span>
+            <ul>
+              <li>iOS, Android, Flutter, React Native</li>
+              <li>Next.js, Node, MongoDB, GraphQL</li>
+              <li>Unity, Unreal, VR/AR, Blockchain</li>
+            </ul>
+            <a class="tile-cta">Learn more →</a>
+          </article>
+
+          <article class="service-tile">
+            <h3>⚖️E-Advocate Legal Tech</h3>
+            <span class="tag">Lawyer Marketplace</span>
+            <ul>
+              <li>Web & Flutter apps with secure chat & payments</li>
+              <li>Subscription-based lawyer discovery</li>
+              <li>Automated document generation & e-sign</li>
+            </ul>
+            <a class="tile-cta">Learn more →</a>
+          </article>
+
+          <article class="service-tile">
+            <h3>📐Engineering Documentation</h3>
+            <span class="tag">Design to Installation</span>
+            <ul>
+              <li>QA, fabrication, testing & installation docs</li>
+              <li>Compliance-ready DMS with version control</li>
+              <li>ISO 9001 & ASME standards</li>
+            </ul>
+            <a class="tile-cta">Learn more →</a>
+          </article>
+
+          <article class="service-tile">
+            <h3>🎬Film Production</h3>
+            <span class="tag">MV Presents</span>
+            <ul>
+              <li>Pre- to post-production pipeline</li>
+              <li>VFX, sound design, color grading</li>
+              <li>End-to-end studio services & distribution</li>
+            </ul>
+            <a class="tile-cta">Learn more →</a>
+          </article>
+        </div>
+      </div>
+    
+<!-- 4.  ABOUT  (story timeline) -->
+      <div class="container">
+        <header class="section-header light">
+          <h2>About Tatito Projects</h2>
+          <p>From a single idea to a multi-vertical ecosystem—our journey is defined by relentless innovation.</p>
+        </header>
+
+        <div class="timeline">
+
+  <div class="timeline-item">
+    <div class="year">2018</div>
+    <div class="content">
+      <h3>The Spark</h3>
+      <ul>
+        <li>Vision formed to solve real-world digital problems</li>
+        <li>Started with a small, trusted local network in Tirupati</li>
+        <li>Early adopters appreciated transparency & commitment</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="year">2019</div>
+    <div class="content">
+      <h3>Innovation Begins</h3>
+      <ul>
+        <li>Delivered innovative solutions tailored to client needs</li>
+        <li>Built long-term trust with first set of customers</li>
+        <li>Positive word-of-mouth growth</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="year">2020</div>
+    <div class="content">
+      <h3>Digital Marketing Era</h3>
+      <ul>
+        <li>Helped businesses establish strong online presence</li>
+        <li>Consistent results led to repeat clients</li>
+        <li>Known for honest pricing and measurable outcomes</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="year">2021</div>
+    <div class="content">
+      <h3>Real Estate Expansion</h3>
+      <ul>
+        <li>Supported property owners and buyers with clarity</li>
+        <li>Focused on verified listings & genuine leads</li>
+        <li>Earned trust through ethical real estate practices</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="year">2022</div>
+    <div class="content">
+      <h3>Voice & Non-Voice Services</h3>
+      <ul>
+        <li>Delivered reliable customer support operations</li>
+        <li>Maintained quality, accuracy, and response standards</li>
+        <li>Clients valued consistency and professionalism</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="year">2023</div>
+    <div class="content">
+      <h3>Creative & Media Ventures</h3>
+      <ul>
+        <li>Worked with creative teams and independent producers</li>
+        <li>Focused on authentic storytelling</li>
+        <li>Built credibility in media & entertainment circles</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="year">2024</div>
+    <div class="content">
+      <h3>Tatito Nexus Takes Shape</h3>
+      <ul>
+        <li>Multiple services unified under one trusted brand</li>
+        <li>Fashion & local services gained steady user adoption</li>
+        <li>Customer satisfaction became the core metric</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="year">2025</div>
+    <div class="content">
+      <h3>Tatito Nexus One</h3>
+      <ul>
+        <li>All Tatito projects integrated into one ecosystem</li>
+        <li>Edverse, Career Hub, Health+, Fashions & Civic aligned</li>
+        <li>Built on trust, reliability, and long-term value</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    <!-- 5.  FRANCHISE  (deep value prop) -->
+      <div class="container">
+        <header class="section-header">
+          <h2>Franchise Opportunities</h2>
+          <p>Own a piece of the future. Operate under the Tatito brand with full tech, marketing & ops support.</p>
+        </header>
+
+        <div class="franchise-highlights">
+          <div class="highlight-card">
+            <h3>Brand License</h3>
+            <p>Exclusive territory rights & full legal authorization to use the Tatito brand.</p>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Centralized Tech</h3>
+            <p>Proprietary dashboards, AI analytics, and automated workflows—updated continuously.</p>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Training & Onboarding</h3>
+            <p>4-week intensive bootcamp + quarterly upskilling + 24/7 support portal.</p>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Marketing Engine</h3>
+            <p>Done-for-you campaigns, regional SEO, social media kits & influencer network.</p>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Revenue Streams</h3>
+            <p>Multiple monetization models: subscriptions, certifications, ads, premium listings.</p>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Exit Strategy</h3>
+            <p>Asset buy-back program & secondary market listing for franchise units.</p>
+          </div>
+<!-- 
+          <div class="highlight-card">
+            <h3>Operational Playbooks</h3>
+            <p>Battle-tested SOPs, pricing frameworks, and execution checklists to run the franchise efficiently from day one.</p>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Strategic Partnerships</h3>
+            <p>Access to Tatito’s vetted vendors, enterprise partners, and global alliances to accelerate growth and reduce operational risk.</p>
+          </div> -->
+
+        </div>
+
+        <button class="cta-large" onclick="switchPage('franchise')">Apply for Franchise →</button>
+      </div>
+
+    <!-- 7.  TESTIMONIALS  (carousel) -->
+    <section class="home-testimonials">
+      <div class="container">
+        <header class="section-header">
+          <h2>What Our Clients Say</h2>
+        </header>
+
+        <div class="testimonial-slider">
+          <div class="testimonial active">
+            <p>“Tatito’s centralized tech allowed me to launch 3 verticals in Hyderabad within 90 days. Revenue crossed
+              ₹3 Cr in Year 1.”</p>
+            <cite>— Ravi K., Multi-Unit Franchisee</cite>
+          </div>
+
+          <div class="testimonial">
+            <p>“The training & support is unmatched. I had zero tech background—now I run a 25-member team.”</p>
+            <cite>— Priya S., Edverse Partner, Kochi</cite>
+          </div>
+
+          <div class="testimonial">
+            <p>“Health+ vertical helped us serve 50,000+ patients during the pandemic. Proud to be part of this
+              mission.”</p>
+            <cite>— Dr. Arjun M., Health+ Operator</cite>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="prev">←</button>
+          <button class="next">→</button>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <!-- 6.  FAQ  (accordion) -->
+    <section class="home-faq">
+      <div class="container">
+        <header class="section-header light">
+          <h2>Frequently Asked Questions</h2>
+        </header>
+
+        <div class="accordion">
+          <details>
+            <summary>What is the minimum investment for a Tatito franchise?</summary>
+            <p>₹5 Lakh for Tier-3 cities, ₹10 Lakh for Tier-2, ₹20 Lakh+ for Tier-1. Includes license, tech stack &
+              initial marketing.</p>
+          </details>
+
+          <details>
+            <summary>Do I need technical background?</summary>
+            <p>No. Our training covers everything—dashboard usage, customer support, and basic troubleshooting. 24/7
+              tech team handles the rest.</p>
+          </details>
+
+          <details>
+            <summary>How long before I break even?</summary>
+            <p>Typical payback period is 8–12 months depending on location and vertical. Our top franchisee achieved ROI
+              in 6 months.</p>
+          </details>
+
+          <details>
+            <summary>Can I own multiple verticals?</summary>
+            <p>Yes. Multi-vertical discounts apply—own Edverse + Career Hub in the same city and save 15% on license
+              fees.</p>
+          </details>
+
+          <details>
+            <summary>Is there a royalty fee?</summary>
+            <p>10% flat on net revenue—covers tech updates, marketing & support. No hidden charges.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- 8.  CONTACT  (split form + map) -->
+    <section class="home-contact">
+      <div class="container split">
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>Have questions or ready to start? Reach out and our team will respond within 24 hours.</p>
+
+          <ul class="contact-list">
+            <li>
+              <strong>Phone:</strong>
+              <a href="tel:+917093704706">+91 70937 04706</a> 
+            </li>
+            <li>
+              <strong>Email:</strong>
+              <a href="mailto:tatitoprojects@gmail.com">tatitoprojects@gmail.com</a> |
+              <a href="mailto:support@tatitoprojects.com">support@tatitoprojects.com</a>
+            </li>
+            <li>
+              <strong>Address:</strong>
+              Tirupati, Andhra Pradesh 517501, India
+            </li>
+          </ul>
+
+
+
+  <div class="map-wrapper">
+    <!-- iframe here -->
+     <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.5450074228506!2d79.43590019999999!3d13.624577799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d4b085e6780cf%3A0x32b866f5776709de!2sTATITO%20PROJECTS!5e0!3m2!1sen!2sin!4v1766521135675!5m2!1sen!2sin"
+    width="100%"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+  </div>
+
+
+
+
+
+
+
+
+          <div class="social-links">
+            <a href="#" aria-label="Twitter">𝕏</a>
+  <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+
+  <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+
+  <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <a href="https://wa.me/919XXXXXXXXX" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <a href="mailto:info@yourdomain.com" aria-label="Email">
+    <i class="fas fa-envelope"></i>
+  </a>
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        
+
+        <form class="contact-form">
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Phone">
+          <select required>
+            <option value="">Select Inquiry Type</option>
+            <option>Franchise</option>
+            <option>Services</option>
+            <option>Partnership</option>
+            <option>Support</option>
+          </select>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message →</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 9.  FOOTER  (mega) -->
+    <!-- <footer class="home-footer">
+      <div class="container footer-grid">
+        <div class="footer-col brand">
+          <img src="logoo.png" alt="Tatito" width="120">
+          <p>One ecosystem for learning, careers, health & intelligence.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Verticals</h4>
+          <ul>
+            <li><a href="#">Tatito Edverse</a></li>
+            <li><a href="#">Career Hub</a></li>
+            <li><a href="#">Health+</a></li>
+            <li><a href="#">Civic One</a></li>
+            <li><a href="#">Fashions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Franchise</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press Kit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">API Docs</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Tatito Projects Pvt. Ltd. All rights reserved.</p>
+        <p>Made with ❤️ in Tirupati, India</p>
+      </div>
+    </footer>-->
+
+
+    <footer class="footer">
+  <div class="footer-grid container">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <h3>Tatito Eco system</h3>
+      <img src="logoo.png" alt="Tatito Logo" class="brand-logo">
+
+
+      <p>India’s premier platform connecting all services in one platform.</p>
+    </div>
+
+      <!-- Links -->
+      <nav class="footer-links">
+        <div class="link-group">
+          <h4>Explore</h4>
+          <a href="#home">Home</a>
+          <a href="#">Advance Search</a>
+          <a href="#">Success Stories</a>
+          <a href="#">Create Blog</a>
+          <a href="#">Credits</a>
+          <a href="#">Site Map</a>
+        </div>
+
+        <div class="link-group">
+          <h4>More Projects</h4>
+              <a href="#" >Tatito Nexus</a>
+              <a href="#">Tatito Edverse</a>
+              <a href="#">Tatito Career Hub</a>
+              <a href="#">Tatito Health+</a>
+              <a href="#">Tatito Civic One</a>
+              <a href="#" >Tatito E-Advocate Services</a>
+              <a href="#">Tatito Fashions</a>
+
+        </div>
+
+        <div class="link-group">
+          <h4>Our services</h4>
+          <a href="#services" onclick="switchPage('services')">International Voice process</a>
+          <a href="#services" onclick="switchPage('services')">Non voice data Entry</a>
+          <a href="#services" onclick="switchPage('services')">Software production</a>
+          <a href="#services" onclick="switchPage('services')">Advocate Legal Services</a>
+          <a href="#services" onclick="switchPage('services')">Engineering Documentation</a>
+          <a href="#services" onclick="switchPage('services')">Film Production</a>
+        </div>
+
+        <div class="link-group">
+          <h4>For Clients</h4>
+          <a href="#">Careers</a>
+          <a href="#">How it works</a>
+          <a href="#" onclick="switchPage('about')">About Us</a>
+        </div>
+
+        <div class="link-group">
+          <h4>Help</h4>
+          <a href="#">Help</a>
+          <a href="#">E-AdvocateCenters</a>
+          <a id="openTatitoModal" style="cursor: pointer;">Contact</a>
+        </div>
+<!-- 
+        <div class="link-group">
+          <h4>Legal</h4>
+          <a href="#">Fraud Alert</a>
+          <a href="#">Terms Of Use</a>
+          <a href="#">Third Party Terms</a>
+          <a onclick="openPage('privacy')">Privacy Policy</a>
+        </div>  
+        <div class="link-group">
+          <a href="#">Cookie Policy</a>
+          <a href="#">Privacy Features</a>
+          <a href="#">Summons/Notices</a>
+          <a href="#">Grievances</a>
+          <a href="#">Refund Policy</a>
+        </div> -->
+<div class="link-group">
+            <h4>Legal</h4>
+
+        <a href="#" class="page "onclick="switchPage('fraud-alert')">Fraud Alert</a>
+<a href="#"class="page " onclick="switchPage('terms')">Terms Of Use</a>
+<a href="#"class="page " onclick="switchPage('third-party')">Third Party Terms</a>
+<a href="#"class="page " onclick="switchPage('privacy')">Privacy Policy</a>
+</div>
+<div class="link-group">
+  <a href="" ></a>
+  
+<a href="#" class="page "onclick="switchPage('cookie')">Cookie Policy</a>
+<a href="#" class="page "onclick="switchPage('privacy-features')">Privacy Features</a>
+<a href="#" class="page "onclick="switchPage('summons')">Summons/Notices</a>
+<a href="#" class="page "onclick="switchPage('grievances')">Grievances</a>
+<a href="#" class="page "onclick="switchPage('refund')">Refund Policy</a>
+</div>
+
+
+      </nav>
+    </div>
+
+  <!-- Connect / Download -->
+  <section class="footer-connect">
+    <div class="container connect-inner">
+
+      <div class="download-block">
+        <!-- <h2>Download Our App</h2> -->
+        <a href="#" class="app-badge">
+          <!-- <img src="/download-on.png" alt="Download on the App Store"> -->
+        </a>
+      </div>
+
+      <div class="footer-approvals">
+
+  <div class="footer-box">
+    <h4>Approved By</h4>
+    <div class="footer-logos">
+      <img src="Digital-india-White.jpg" alt="Approved Authority">
+      <img src="indiagovin.png" alt="Approved Authority">
+      <!-- <img src="Approved1.png" alt="Approved Authority"> -->
+    </div>
+  </div>
+
+  <div class="footer-box">
+    <h4>Partnership</h4>
+    <div class="footer-logos">
+      <img src="/doj.jpg" alt="Partner">
+      <img src="/ecomitte.jpeg" alt="Partner">
+      <!-- <img src="Approved4.png" alt="Partner"> -->
+    </div>
+  </div>
+
+  <div class="footer-box">
+    <h4>Collaboration</h4>
+    <div class="footer-logos">
+      <img src="india_code.jpg" alt="Collaboration">
+      <img src="nic.png" alt="Collaboration">
+      <!-- <img src="Approved1.png" alt="Collaboration"> -->
+    </div>
+  </div>
+
+  <div class="footer-box">
+    <h4>Association</h4>
+    <div class="footer-logos">
+      <img src="bar-council.png" alt="Association">
+      <img src="Digital-india-White.jpg" alt="Association">
+      <!-- <img src="Assositation1.png" alt="Association"> -->
+    </div>
+  </div>
+
+</div>
+
+    </div>
+  </section>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Tatito's Services Ltd. All rights reserved.</p>
+    <p>@Built by Ilearn Nexus Technology</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section> 
+
+
+
+<section id="cart" class="page cart-page">
+  <div class="cart-container">
+
+    <!-- LEFT: CART ITEMS -->
+    <div class="cart-items">
+      <h2>Your Cart</h2>
+
+      <div class="cart-item">
+        <img src="add1.jpg" alt="Product">
+
+        <div class="cart-details">
+          <h3>Premium Software Subscription</h3>
+          <p class="cart-meta">Tatito Services • Digital Access</p>
+
+          <div class="cart-actions">
+            <div class="qty-control">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </div>
+
+            <button class="link-btn">Save for later</button>
+            <button class="link-btn danger">Remove</button>
+          </div>
+        </div>
+
+        <div class="cart-price">₹9,999</div>
+      </div>
+
+      <div class="cart-item">
+        <img src="add2.jpg" alt="Product">
+
+        <div class="cart-details">
+          <h3>Franchise Starter Kit</h3>
+          <p class="cart-meta">Tatito Franchise • One-Time</p>
+
+          <div class="cart-actions">
+            <div class="qty-control">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </div>
+
+            <button class="link-btn">Save for later</button>
+            <button class="link-btn danger">Remove</button>
+          </div>
+        </div>
+
+        <div class="cart-price">₹49,999</div>
+      </div>
+    </div>
+
+    <!-- RIGHT: SUMMARY -->
+    <aside class="cart-summary">
+      <h3>Order Summary</h3>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>₹59,998</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Tax</span>
+        <span>₹1,200</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Discount</span>
+        <span>- ₹2,000</span>
+      </div>
+
+      <div class="summary-total">
+        <span>Total</span>
+        <span>₹59,198</span>
+      </div>
+
+      <button class="checkout-btn">Proceed to Checkout →</button>
+
+      <p class="secure-note">🔒 Secure checkout • SSL encrypted</p>
+    </aside>
+
+  </div>
+</section>
+
+
+<section class="notify-panel page" id="notifyPanel">
+  <div class="notify-header">
+    <h3>Notifications</h3>
+    <button onclick="toggleNotify()">✕</button>
+  </div>
+
+  <div class="notify-list">
+    <div class="notify-item unread">
+      <h4>New Franchise Inquiry</h4>
+      <p>A new franchise application was submitted from Hyderabad.</p>
+      <span>2 min ago</span>
+    </div>
+
+    <div class="notify-item">
+      <h4>Payment Successful</h4>
+      <p>Your subscription payment has been processed successfully.</p>
+      <span>1 hour ago</span>
+    </div>
+
+    <div class="notify-item">
+      <h4>System Update</h4>
+      <p>New AI recommendation engine deployed.</p>
+      <span>Yesterday</span>
+    </div>
+  </div>
+</section>
+
+
+<section class="filter-panel" id="filterPanel">
+  <div class="filter-header">
+    <h3>Filters</h3>
+    <button onclick="toggleFilter()">✕</button>
+  </div>
+
+  <div class="filter-body">
+    <label>
+      Category
+      <select>
+        <option>All</option>
+        <option>Services</option>
+        <option>Courses</option>
+        <option>Franchise</option>
+      </select>
+    </label>
+
+    <label>
+      Price Range
+      <input type="range" min="0" max="100">
+    </label>
+
+    <label class="check">
+      <input type="checkbox"> Available Now
+    </label>
+
+    <label class="check">
+      <input type="checkbox"> Popular
+    </label>
+
+    <button class="apply-filter">Apply Filters</button>
+  </div>
+</section>
+
+  <!-- <section id="login" class="page">
+
+    <div class="auth-shell">
+      <div class="auth-panel auth-info">
+        <h1>TATITO</h1>
+        <p>
+          <img src="loginfea.png" alt="Tatito Logo" class="auth-logo" />
+        </p>
+        One account. Multiple ecosystems.<br>
+        Access your digital identity.
+        </p>
+        <button id="switchBtn">Create Account →</button>
+      </div>
+
+      <div class="auth-panel auth-form">
+
+        <form class="form login active">
+          <h2>Login</h2>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Sign In</button>
+          <span class="switch">No account? Register</span>
+        </form>
+
+        <form class="form register">
+          <h2>Create Account</h2>
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Register</button>
+          <span class="switch">Already have an account?</span>
+        </form>
+
+      </div>
+    </div>
+
+
+  </section>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+  <section id="franchise" class="page">
+
+
+    <div class="franchise-container">
+
+      <!-- HEADER -->
+      <header class="franchise-header">
+        <h1>Tatito Franchise System</h1>
+        <p>
+          A next-generation franchise ecosystem powered by centralized intelligence,
+          enabling partners to own and operate independent digital verticals.
+        </p>
+      </header>
+
+      <!-- WHAT IS -->
+      <div class="franchise-block">
+        <h2>What Is a Tatito Franchise?</h2>
+        <p>
+          The Tatito Franchise System allows entrepreneurs, professionals, and institutions
+          to operate branded Tatito verticals in their region — backed by a centralized
+          technology core, standardized systems, and continuous innovation.
+        </p>
+        <p>
+          Each franchise operates independently while remaining connected to the Tatito
+          Intelligence Core for technology, updates, analytics, and operational support.
+        </p>
+      </div>
+
+      <!-- VERTICALS -->
+      <div class="franchise-block">
+        <h2>Available Franchise Verticals</h2>
+        <ul class="vertical-list">
+          <li><strong>Tatito Edverse</strong> — Education & learning platforms</li>
+          <li><strong>Tatito Career Hub</strong> — Career services & talent systems</li>
+          <li><strong>Tatito Nexus</strong> — Digital & technology solutions</li>
+          <li><strong>Tatito Civic One</strong> — Civic & governance systems</li>
+          <li><strong>Tatito Health+</strong> — Health & wellness solutions</li>
+          <li><strong>Tatito Fashions</strong> — Technology-driven fashion platforms</li>
+        </ul>
+      </div>
+
+      <!-- WHAT YOU GET -->
+      <div class="franchise-grid">
+
+        <div class="franchise-card">
+          <h3>Brand License</h3>
+          <p>
+            Rights to operate under the Tatito brand within a defined territory
+            with full legal and brand authorization.
+          </p>
+        </div>
+
+        <div class="franchise-card">
+          <h3>Technology & Systems</h3>
+          <p>
+            Access to proprietary platforms, dashboards, automation tools,
+            and centralized intelligence infrastructure.
+          </p>
+        </div>
+
+        <div class="franchise-card">
+          <h3>Training & Onboarding</h3>
+          <p>
+            Structured onboarding, operational training, documentation,
+            and continuous skill development.
+          </p>
+        </div>
+
+        <div class="franchise-card">
+          <h3>Marketing Support</h3>
+          <p>
+            Brand assets, digital marketing frameworks, campaigns,
+            and regional growth strategies.
+          </p>
+        </div>
+
+        <div class="franchise-card">
+          <h3>Operations Support</h3>
+          <p>
+            Process templates, customer workflows, compliance guidance,
+            and operational best practices.
+          </p>
+        </div>
+
+        <div class="franchise-card">
+          <h3>Continuous Innovation</h3>
+          <p>
+            Ongoing upgrades, feature releases, and system improvements
+            managed centrally by Tatito.
+          </p>
+        </div>
+
+      </div>
+
+
+        <div class="eco-header">
+        <h1>How Tatito Franchise System Works</h1>
+        <p>A unified, scalable ecosystem powering independent verticals across education, careers, technology, civic systems, health, and fashion.</p>
+        </div>
+
+        <div class="eco-stage">
+        <div class="core">
+            <span>TATITO</span>
+            <small>Central Intelligence Core</small>
+        </div>
+        <svg id="svg" class="connections" viewBox="0 0 600 600"></svg>
+        </div>
+
+
+
+
+
+      <!-- WHO SHOULD APPLY -->
+      <div class="franchise-block">
+        <h2>Who Should Apply?</h2>
+        <ul class="criteria-list">
+          <li>Entrepreneurs seeking a scalable digital business</li>
+          <li>Professionals looking to lead a regional operation</li>
+          <li>Institutions expanding into technology-driven services</li>
+          <li>Investors interested in long-term ecosystem growth</li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div class="franchise-cta">
+        <h2>Start Your Franchise Journey</h2>
+        <p>
+          Join a unified ecosystem designed for scale, impact, and sustainability.
+        </p>
+        <button class="applyfranc"onclick="scrollServicesBottom()">Apply for Franchise</button>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+<div class="franchise-system">
+  <h2>Apply for Franchise</h2>
+  <p class="sub">
+    Complete the online application to initiate the Tatito franchise onboarding process.
+  </p>
+
+  <form class="franchise-form">
+
+    <!-- STEP 1 -->
+    <div class="form-group">
+      <label>Choose Franchise Vertical *</label>
+      <select required>
+        <option value="">Select</option>
+        <option>Tatito Edverse</option>
+        <option>Tatito Career Hub</option>
+        <option>Tatito Nexus</option>
+        <option>Tatito Civic One</option>
+        <option>Tatito Health+</option>
+        <option>Tatito Fashions</option>
+      </select>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="form-group">
+      <label>Full Name *</label>
+      <input type="text" placeholder="Your Name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email *</label>
+      <input type="email" placeholder="Email Address" required>
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number *</label>
+      <input type="tel" placeholder="Mobile Number" required>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="form-group">
+      <label>Preferred City / Territory</label>
+      <input type="text" placeholder="City / Region" required>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="form-group">
+      <label>Available Investment Range</label>
+      <select required>
+        <option value="">Select Range</option>
+        <option>₹5L – ₹10L</option>
+        <option>₹10L – ₹20L</option>
+        <option>₹20L+</option>
+      </select>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="form-group">
+      <label>Upload ID / Business Proof</label>
+      <input type="file" required>
+    </div>
+
+    <!-- STEP 6 -->
+    <div class="form-group checkbox">
+      <input type="checkbox" required>
+      <span>I agree to Tatito franchise terms & conditions</span>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Application</button>
+
+  </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="eco-header">
+        <h1>How Tatito Franchise System Works</h1>
+        <p>A unified, scalable ecosystem powering independent verticals across education, careers, technology, civic systems, health, and fashion.</p>
+        </div>
+
+        <div class="eco-stage">
+        <div class="core">
+            <span>TATITO</span>
+            <small>Central Intelligence Core</small>
+        </div>
+        <svg id="svg" class="connections" viewBox="0 0 600 600"></svg>
+        </div> -->
+
+        <!-- <div class="franchise-panel" id="franchisePanel">
+        <button class="close-panel" id="closePanel">×</button>
+        <h2 id="branchTitle">Franchise Application</h2>
+            <form class="franchise-form" id="dynamicForm">       
+           <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="text" placeholder="Preferred City / Territory" required>
+            <select required>
+            <option value="">Investment Range</option>
+            <option>₹5L – ₹10L</option>
+            <option>₹10L – ₹20L</option>
+            <option>₹20L+</option>
+            </select>
+            <button type="submit">Submit Application</button>
+        </form>
+        </div> -->
+
+        <!-- Franchise Panel - Production Ready -->
+        <!-- <div class="franchise-panel" id="franchisePanel">
+        <button class="close-panel" id="closePanel">×</button>
+
+        
+        <div class="franchise-container">
+            <div class="franchise-left">
+            <div class="franchise-video">
+                <iframe src="https://www.youtube.com/embed/ZBavpo-bUYk" 
+                        title="How to Become a Franchise Owner" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+            
+            <div class="all-franchise-text">
+                <h3 id="branchTitle" class="typing-heading">Available All Franchises Here</h3>
+                <p>Explore opportunities across Tatito Edverse, Career Hub, Nexus, Health+, Civic One, and Fashions.</p>
+            </div>
+            </div>
+            
+            <div class="franchise-right">
+            <h2 id="branchTitle" class="typing-heading">Tatito Franchise Application</h2>
+            
+            <form class="franchise-form" id="dynamicForm">
+                        <button class="close-panel" id="closePanel">×</button>
+
+            </form>
+            </div>
+        </div>
+        </div> -->
+
+
+<div class="franchise-overlay" id="franchisePanel">
+  <button class="franchise-close" id="closePanel">×</button>
+
+  <div class="franchise-glass">
+
+    <!-- LEFT SIDE -->
+    <div class="franchise-info">
+
+      <!-- VIDEO (30% HEIGHT) -->
+      <div class="franchise-video-box">
+        <iframe
+          src="https://www.youtube.com/embed/ZBavpo-bUYk"
+          title="How to Become a Franchise Owner"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- TEXT BELOW -->
+      <div class="franchise-text">
+        <h3 id="typingHeading" class="typing-heading">
+          Available All Franchises Here
+        </h3>
+        <p>
+          Explore opportunities across Tatito Edverse, Career Hub, Nexus,
+          Health+, Civic One, and Fashions.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="franchise-form-area">
+        <h3 id="branchTitle" class="typing-heading">
+          Available All Franchises Here
+        </h3>
+      <h2 id="formTitle">Tatito Franchise Application</h2>
+
+      <form class="franchise-form" id="dynamicForm">
+        <!-- Dynamic fields injected via JS -->
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+  </section>
+
+
+
+<script>
+document.querySelector(".franchise-form").addEventListener("submit", e => {
+  e.preventDefault();
+  alert("Application submitted successfully. Our team will contact you.");
+  e.target.reset();
+});
+</script>
+
+  
+<!-- <script>
+  /* =====================================================
+     CONFIG
+  ===================================================== */
+  const center = { x: 300, y: 300 };
+  const radius = 220;
+  const branchDelay = 400;
+
+
+
+  const branches = [
+  { angle: -90, label: "Tatito Edverse ↗", class: "node-edverse", key: "edverse" },
+  { angle: -30, label: "Tatito Career Hub ↗", class: "node-career", key: "career" },
+  { angle: 30, label: "Tatito Nexus ↗", class: "node-nexus", key: "nexus" },
+  { angle: 90, label: "Tatito Civic One ↗", class: "node-civic", key: "civic" },
+  { angle: 150, label: "Tatito Health+ ↗", class: "node-health", key: "health" },
+  { angle: 210, label: "Tatito Fashions ↗", class: "node-fashions", key: "fashion" }
+];
+
+  /* =====================================================
+     ELEMENTS
+  ===================================================== */
+  const stage = document.querySelector(".eco-stage");
+  const svg = document.getElementById("svg");
+  const core = document.querySelector(".core");
+
+  const panel = document.getElementById("franchisePanel");
+  const closePanel = document.getElementById("closePanel");
+  const branchTitle = document.getElementById("branchTitle");
+
+  /* =====================================================
+     STATE
+  ===================================================== */
+  let hasAnimated = false;
+  let isAnimating = false;
+  let panelOpen = false;
+
+  /* =====================================================
+     ANIMATION FUNCTIONS
+  ===================================================== */
+  function growAllBranches() {
+    if (hasAnimated || isAnimating || panelOpen) return;
+
+    isAnimating = true;
+    core.classList.add("visible");
+
+    branches.forEach((branch, i) => {
+      setTimeout(() => {
+        growBranch(branch);
+        if (i === branches.length - 1) {
+          isAnimating = false;
+          hasAnimated = true;
+        }
+      }, i * branchDelay);
+    });
+  }
+
+  function growBranch(branch) {
+    const rad = branch.angle * Math.PI / 180;
+
+    // SVG line
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", center.x);
+    line.setAttribute("y1", center.y);
+    line.setAttribute("x2", center.x);
+    line.setAttribute("y2", center.y);
+    line.style.stroke = "rgba(255,255,255,0.35)";
+    line.style.strokeDasharray = "4 6";
+    svg.appendChild(line);
+
+    // Node
+    const node = document.createElement("div");
+    node.className = `node ${branch.class || ''}`.trim();
+    node.textContent = branch.label;
+    node.dataset.branch = branch.key;
+
+    stage.appendChild(node);
+
+    const start = performance.now();
+    const duration = 700;
+
+    function animate(now) {
+      const t = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - t, 3);
+      const len = radius * ease;
+
+      const x = center.x + Math.cos(rad) * len;
+      const y = center.y + Math.sin(rad) * len;
+
+      line.setAttribute("x2", x);
+      line.setAttribute("y2", y);
+
+      node.style.left = x + "px";
+      node.style.top = y + "px";
+      node.style.opacity = ease;
+
+      if (t < 1) requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  function resetSystem() {
+    if (panelOpen) return;
+
+    hasAnimated = false;
+    isAnimating = false;
+
+    svg.innerHTML = "";
+    stage.querySelectorAll(".node").forEach(n => n.remove());
+    core.classList.remove("visible", "swoop");
+    stage.classList.remove("shrink", "move-left");
+  }
+
+  /* =====================================================
+     SCROLL TRIGGER
+  ===================================================== */
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          growAllBranches();
+        } else {
+          resetSystem();
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  observer.observe(stage);
+
+  /* =====================================================
+     NODE CLICK → OPEN PANEL
+  ===================================================== */
+  stage.addEventListener("click", e => {
+    const node = e.target.closest(".node");
+    if (!node || panelOpen) return;
+
+    panelOpen = true;
+    //branchTitle.innerText = node.textContent.replace("↗", "").trim();
+    const branchKey = node.dataset.branch;
+  const data = forms[branchKey];
+
+  branchTitle.innerText = data.title;
+  dynamicForm.innerHTML =
+  data.fields + `<button type="submit">Submit Application</button>`;
+
+
+
+
+    // Pop selected node
+    stage.querySelectorAll(".node").forEach(n => n.classList.remove("pop"));
+    node.classList.add("pop");
+
+    // Shrink first
+    stage.classList.add("shrink");
+
+    // Core swoop
+    core.classList.add("swoop");
+
+    // Then move left (final state)
+    setTimeout(() => {
+      stage.classList.remove("shrink");
+      stage.classList.add("move-left");
+    }, 800);
+
+    // Open panel
+    setTimeout(() => {
+      panel.classList.add("active");
+    }, 1200);
+  });
+
+  /* =====================================================
+     CLOSE PANEL
+  ===================================================== */
+  closePanel.addEventListener("click", () => {
+    panelOpen = false;
+
+    panel.classList.remove("active");
+    stage.classList.remove("move-left");
+    stage.querySelectorAll(".node").forEach(n => n.classList.remove("pop"));
+    core.classList.remove("swoop");
+
+    setTimeout(() => {
+      stage.classList.remove("shrink");
+    }, 300);
+  });
+</script> -->
+
+
+
+<script>
+/* =====================================================
+   CONFIG
+===================================================== */
+const center = { x: 300, y: 300 };
+const radius = 220;
+const branchDelay = 400;
+
+const branches = [
+  { angle: -90, label: "Tatito Edverse ↗", class: "node-edverse", key: "edverse" },
+  { angle: -30, label: "Tatito Career Hub ↗", class: "node-career", key: "career" },
+  { angle: 30, label: "Tatito Nexus ↗", class: "node-nexus", key: "nexus" },
+  { angle: 90, label: "Tatito Civic One ↗", class: "node-civic", key: "civic" },
+  { angle: 150, label: "Tatito Health+ ↗", class: "node-health", key: "health" },
+  { angle: 210, label: "Tatito Fashions ↗", class: "node-fashions", key: "fashion" }
+];
+
+/* =====================================================
+   FORM DEFINITIONS (KEY → FORM)
+===================================================== */
+const forms = {
+  edverse: {
+    title: "Tatito Edverse – Education Franchise Application",
+    fields: `
+      <!-- Personal Information Section -->
+      <h4>Personal Details</h4>
+      <input type="text" required placeholder="Full Name">
+      <input type="tel" required placeholder="Phone Number (Mobile)">
+      <input type="email" required placeholder="Email Address">
+      <input type="date" required placeholder="Date of Birth">
+      <input type="text" required placeholder="Residential Address">
+      <input type="text" required placeholder="City / State / PIN Code">
+
+      <!-- Professional Background -->
+      <h4>Professional & Educational Background</h4>
+      <input type="text" required placeholder="Highest Educational Qualification (e.g., Degree, Institution)">
+      <input type="number" required placeholder="Years of Experience in Education Sector">
+      <input type="text" placeholder="Current Occupation / Business (if any)">
+      <textarea rows="3" required placeholder="Brief Work History / Relevant Experience in Teaching, Administration, or School Management"></textarea>
+
+      <!-- Franchise Interest -->
+      <h4>Franchise Preferences</h4>
+      <select required>
+        <option value="" disabled selected>Institution Type</option>
+        <option>Pre-School / Kindergarten</option>
+        <option>Primary / Secondary School</option>
+        <option>Coaching / Skill Center</option>
+        <option>Higher Education Institute</option>
+      </select>
+      <input type="text" required placeholder="Preferred Location (City / Area)">
+      <input type="number" required placeholder="Available Space (in sq. ft.)" min="1000">
+      <select required>
+        <option value="" disabled selected>Property Ownership</option>
+        <option>Owned</option>
+        <option>Leased / Rented</option>
+        <option>Planning to Acquire</option>
+      </select>
+
+      <!-- Financial Information -->
+      <h4>Financial Details</h4>
+      <input type="number" required placeholder="Total Investment Capacity (in Lakhs ₹)">
+      <input type="number" required placeholder="Liquid Assets / Cash Available (in Lakhs ₹)">
+      <input type="number" required placeholder="Net Worth (in Lakhs ₹)">
+      <textarea rows="3" placeholder="Sources of Funding (e.g., Personal Savings, Loans, Investors)"></textarea>
+
+      <!-- Additional Information -->
+      <h4>Motivation & References</h4>
+      <textarea rows="4" required placeholder="Why do you want to join Tatito Edverse? (Your vision for education, passion, etc.)"></textarea>
+      <input type="text" placeholder="References (Name, Contact, Relation - Optional)">
+      <label for="resume">Upload Resume / CV (Optional)</label>
+      <input type="file" id="resume" accept=".pdf,.doc,.docx">
+    `
+  },
+
+  career: {
+    title: "Tatito Career Hub – Career Services Franchise Application",
+    fields: `
+      <!-- Personal Information -->
+      <h4>Applicant Details</h4>
+      <input type="text" required placeholder="Full Name">
+      <input type="tel" required placeholder="Phone Number">
+      <input type="email" required placeholder="Email Address">
+      <input type="text" required placeholder="Current Address">
+      <input type="text" required placeholder="City / State">
+
+      <!-- Background & Experience -->
+      <h4>Professional Background</h4>
+      <input type="text" required placeholder="Highest Qualification (e.g., Degree in Counseling, HR)">
+      <input type="number" required placeholder="Years of Experience in Career Counseling / HR / Education">
+      <select required>
+        <option value="" disabled selected>Certification Status</option>
+        <option>Certified Career Counselor</option>
+        <option>HR Professional</option>
+        <option>Teacher / Trainer</option>
+        <option>No Certification, but Relevant Experience</option>
+      </select>
+      <textarea rows="3" required placeholder="Describe Your Experience in Guiding Careers, Coaching, or Related Fields"></textarea>
+
+      <!-- Franchise Details -->
+      <h4>Business Preferences</h4>
+      <select required>
+        <option value="" disabled selected>Primary Focus Area</option>
+        <option>Student Career Guidance</option>
+        <option>Professional Upskilling</option>
+        <option>Job Placement Services</option>
+        <option>Government Exam Prep</option>
+      </select>
+      <input type="text" required placeholder="Preferred Location for Hub">
+      <input type="number" required placeholder="Available Office Space (sq. ft.)" min="500">
+
+      <!-- Financial & Business Plan -->
+      <h4>Financial Information</h4>
+      <input type="number" required placeholder="Investment Budget (in Lakhs ₹)">
+      <input type="number" required placeholder="Net Worth (in Lakhs ₹)">
+      <textarea rows="3" placeholder="Business Plan Outline (Target Audience, Marketing Strategy)"></textarea>
+
+      <!-- Motivation -->
+      <h4>Additional Details</h4>
+      <textarea rows="4" required placeholder="Why Tatito Career Hub? How will you contribute to career development in your area?"></textarea>
+      <label for="cert">Upload Certifications / Resume (Optional)</label>
+      <input type="file" id="cert" accept=".pdf,.doc,.docx">
+    `
+  },
+
+  nexus: {
+    title: "Tatito Nexus – Startup & Tech Platform Franchise Application",
+    fields: `
+      <!-- Founder/Applicant Info -->
+      <h4>Personal / Founder Details</h4>
+      <input type="text" required placeholder="Full Name">
+      <input type="tel" required placeholder="Phone Number">
+      <input type="email" required placeholder="Email Address">
+      <input type="text" required placeholder="City / Location">
+      <input type="text" placeholder="LinkedIn Profile URL (Optional)">
+
+      <!-- Business/Startup Background -->
+      <h4>Business Overview</h4>
+      <input type="text" required placeholder="Existing Company Name (if any)">
+      <textarea rows="3" required placeholder="Describe Your Startup / Tech Experience (e.g., Previous Ventures, Roles in Incubators)"></textarea>
+      <select required>
+        <option value="" disabled selected>Hub Type</option>
+        <option>Startup Incubator</option>
+        <option>Tech Accelerator</option>
+        <option>Co-Working & Innovation Space</option>
+        <option>SaaS Development Center</option>
+      </select>
+
+      <!-- Market & Traction -->
+      <h4>Market Insights</h4>
+      <textarea rows="3" required placeholder="Target Market / Ecosystem in Your Area (e.g., Local Startups, Industries)"></textarea>
+      <input type="text" placeholder="Key Milestones Achieved (e.g., Funding Raised, Products Launched - Optional)">
+
+      <!-- Franchise Setup -->
+      <h4>Setup Details</h4>
+      <input type="text" required placeholder="Preferred Location">
+      <input type="number" required placeholder="Available Space (sq. ft.)" min="2000">
+      <input type="number" required placeholder="Investment Capacity (in Lakhs ₹)">
+
+      <!-- Financial & Vision -->
+      <h4>Financials & Vision</h4>
+      <input type="number" required placeholder="Net Worth (in Lakhs ₹)">
+      <textarea rows="4" required placeholder="Your Vision for Building a Startup Ecosystem with Tatito Nexus (Include Team Plans, Partnerships)"></textarea>
+      <label for="pitch">Upload Pitch Deck / Business Plan (Optional)</label>
+      <input type="file" id="pitch" accept=".pdf,.ppt,.pptx">
+      <input type="text" placeholder="References (e.g., Mentors, Investors - Optional)">
+    `
+  },
+
+  civic: {
+    title: "Tatito Civic One – Public Services Franchise Application",
+    fields: `
+      <!-- Applicant Information -->
+      <h4>Personal Details</h4>
+      <input type="text" required placeholder="Full Name">
+      <input type="tel" required placeholder="Phone Number">
+      <input type="email" required placeholder="Email Address">
+      <input type="text" required placeholder="Address">
+      <input type="text" required placeholder="City / District / PIN">
+
+      <!-- Experience & Background -->
+      <h4>Professional Background</h4>
+      <input type="number" placeholder="Years of Experience in Public Services / Kiosks">
+      <select required>
+        <option value="" disabled selected>Prior Experience</option>
+        <option>CSC / e-Seva Center Operator</option>
+        <option>Banking / Financial Services</option>
+        <option>IT / Tech Support</option>
+        <option>No Experience, but Local Network</option>
+      </select>
+      <textarea rows="3" placeholder="Describe Relevant Skills (e.g., Handling Documents, Customer Service)"></textarea>
+
+      <!-- Services & Setup -->
+      <h4>Franchise Preferences</h4>
+      <select required>
+        <option value="" disabled selected>Services to Offer</option>
+        <option>Digital Government Services (Aadhaar, PAN)</option>
+        <option>Bill Payments & Recharges</option>
+        <option>Documentation & Certificates</option>
+        <option>Full Suite</option>
+      </select>
+      <input type="text" required placeholder="Preferred Kiosk Location (High Footfall Area)">
+      <input type="number" required placeholder="Available Space (sq. ft.)" min="200">
+      <select required>
+        <option value="" disabled selected>Technical Readiness</option>
+        <option>Have Computer / Internet Setup</option>
+        <option>Need Assistance for Setup</option>
+      </select>
+
+      <!-- Financials -->
+      <h4>Financial Information</h4>
+      <input type="number" required placeholder="Investment Amount (in Lakhs ₹)">
+      <input type="number" required placeholder="Net Worth (in Lakhs ₹)">
+
+      <!-- Additional -->
+      <h4>Motivation & Compliance</h4>
+      <textarea rows="4" required placeholder="How will you ensure compliance with government regulations? Your plan for serving the community."></textarea>
+      <label for="idproof">Upload ID Proof / Resume (Optional)</label>
+      <input type="file" id="idproof" accept=".pdf,.jpg,.png">
+    `
+  },
+
+  health: {
+    title: "Tatito Health+ – Healthcare Franchise Application",
+    fields: `
+      <!-- Personal / Professional Info -->
+      <h4>Applicant Details</h4>
+      <input type="text" required placeholder="Full Name (Doctor / Owner)">
+      <input type="text" required placeholder="Medical Qualification (e.g., MBBS, Specialization)">
+      <input type="text" placeholder="Medical Council Registration Number">
+      <input type="tel" required placeholder="Phone Number">
+      <input type="email" required placeholder="Email Address">
+      <input type="text" required placeholder="City / Location">
+
+      <!-- Experience -->
+      <h4>Professional Experience</h4>
+      <input type="number" required placeholder="Years of Practice / Healthcare Experience">
+      <textarea rows="3" required placeholder="Current Clinic / Hospital Details (if any)"></textarea>
+
+      <!-- Franchise Type -->
+      <h4>Franchise Preferences</h4>
+      <select required>
+        <option value="" disabled selected>Clinic Type</option>
+        <option>General Clinic</option>
+        <option>Specialty Clinic (e.g., Dental, Ayurvedic)</option>
+        <option>Diagnostics Lab</option>
+        <option>Pharmacy</option>
+      </select>
+      <input type="text" required placeholder="Preferred Location">
+      <input type="number" required placeholder="Available Space (sq. ft.)" min="800">
+      <input type="number" placeholder="Expected Staff Size (Doctors, Nurses, etc.)">
+
+      <!-- Financials -->
+      <h4>Financial Details</h4>
+      <input type="number" required placeholder="Investment Capacity (in Lakhs ₹)">
+      <input type="number" required placeholder="Net Worth (in Lakhs ₹)">
+      <textarea rows="3" placeholder="Funding Sources"></textarea>
+
+      <!-- Vision & Compliance -->
+      <h4>Additional Information</h4>
+      <textarea rows="4" required placeholder="Your Plan for Quality Healthcare Delivery (Patient Care, Compliance with Health Regulations)"></textarea>
+      <label for="license">Upload Medical License / CV (Optional)</label>
+      <input type="file" id="license" accept=".pdf,.doc,.docx">
+    `
+  },
+
+  fashion: {
+    title: "Tatito Fashions – Retail Franchise Application",
+    fields: `
+      <!-- Personal Info -->
+      <h4>Applicant Details</h4>
+      <input type="text" required placeholder="Full Name">
+      <input type="tel" required placeholder="Phone Number">
+      <input type="email" required placeholder="Email Address">
+      <input type="text" required placeholder="Current Address">
+      <input type="text" required placeholder="City / State">
+
+      <!-- Experience -->
+      <h4>Retail Background</h4>
+      <input type="number" required placeholder="Years of Experience in Fashion / Retail">
+      <input type="text" placeholder="Current or Previous Store / Business Name">
+      <textarea rows="3" required placeholder="Describe Your Retail Experience (Sales, Inventory Management, Customer Service)"></textarea>
+
+      <!-- Franchise Preferences -->
+      <h4>Store Details</h4>
+      <select required>
+        <option value="" disabled selected>Category Focus</option>
+        <option>Ethnic Wear</option>
+        <option>Western Fashion</option>
+        <option>Footwear & Accessories</option>
+        <option>Multi-Brand Store</option>
+      </select>
+      <input type="text" required placeholder="Preferred Store Location (Mall, High Street)">
+      <input type="number" required placeholder="Available Retail Space (sq. ft.)" min="800">
+      <select required>
+        <option value="" disabled selected>Property Status</option>
+        <option>Owned</option>
+        <option>Leased</option>
+        <option>Negotiating</option>
+      </select>
+
+      <!-- Financials -->
+      <h4>Financial Information</h4>
+      <input type="number" required placeholder="Investment Budget (in Lakhs ₹)">
+      <input type="number" required placeholder="Net Worth (in Lakhs ₹)">
+      <textarea rows="3" placeholder="Target Market & Sales Strategy"></textarea>
+
+      <!-- Motivation -->
+      <h4>Additional Details</h4>
+      <textarea rows="4" required placeholder="Why Tatito Fashions? Your Passion for Fashion Retail and Local Market Insights."></textarea>
+      <label for="portfolio">Upload Retail Portfolio / Photos (Optional)</label>
+      <input type="file" id="portfolio" accept=".pdf,.jpg,.png">
+    `
+  }
+};
+/* =====================================================
+   ELEMENTS
+===================================================== */
+const stage = document.querySelector(".eco-stage");
+const svg = document.getElementById("svg");
+const core = document.querySelector(".core");
+
+const panel = document.getElementById("franchisePanel");
+const closePanel = document.getElementById("closePanel");
+const branchTitle = document.getElementById("branchTitle");
+const dynamicForm = document.getElementById("dynamicForm");
+
+/* =====================================================
+   STATE
+===================================================== */
+let hasAnimated = false;
+let isAnimating = false;
+let panelOpen = false;
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+function growAllBranches() {
+  if (hasAnimated || isAnimating || panelOpen) return;
+
+  isAnimating = true;
+  core.classList.add("visible");
+
+  branches.forEach((branch, i) => {
+    setTimeout(() => {
+      growBranch(branch);
+      if (i === branches.length - 1) {
+        isAnimating = false;
+        hasAnimated = true;
+      }
+    }, i * branchDelay);
+  });
+}
+
+function growBranch(branch) {
+  const rad = branch.angle * Math.PI / 180;
+
+  const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", center.x);
+    line.setAttribute("y1", center.y);
+    line.setAttribute("x2", center.x);
+    line.setAttribute("y2", center.y);
+    line.style.stroke = "rgba(255,255,255,0.35)";
+    line.style.strokeDasharray = "4 6";
+    svg.appendChild(line);
+
+  const node = document.createElement("div");
+  node.className = `node ${branch.class}`;
+  node.textContent = branch.label;
+  node.dataset.branch = branch.key; // 🔥 KEY LINK
+  stage.appendChild(node);
+
+  const start = performance.now();
+  const duration = 700;
+
+  function animate(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - t, 3);
+    const len = radius * ease;
+
+    const x = center.x + Math.cos(rad) * len;
+    const y = center.y + Math.sin(rad) * len;
+
+    line.setAttribute("x2", x);
+    line.setAttribute("y2", y);
+
+    node.style.left = x + "px";
+    node.style.top = y + "px";
+    node.style.opacity = ease;
+
+    if (t < 1) requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+}
+
+/* =====================================================
+   SCROLL TRIGGER
+===================================================== */
+new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.isIntersecting ? growAllBranches() : null;
+  });
+}, { threshold: 0.4 }).observe(stage);
+
+/* =====================================================
+   NODE CLICK → PANEL
+===================================================== */
+stage.addEventListener("click", e => {
+  const node = e.target.closest(".node");
+  if (!node || panelOpen) return;
+
+  panelOpen = true;
+  const key = node.dataset.branch;
+  const data = forms[key];
+
+  // Set the heading
+branchTitle.innerText = data.title;
+
+// Inject full custom form layout
+dynamicForm.innerHTML = `
+
+  
+  <div class="form-content">
+    ${data.fields}
+    
+    <button type="submit" class="submit-btn">Submit Application</button>
+  </div>
+`;
+  panel.classList.add("active");
+});
+
+// Close panel when clicking the inner close button
+document.addEventListener('click', (e) => {
+  if (e.target.id === 'formCloseBtn') {
+    panelOpen = false;
+    panel.classList.remove('active');
+    // Optional: reset animations if needed
+  }
+});
+
+/* =====================================================
+   CLOSE PANEL
+===================================================== */
+closePanel.addEventListener("click", () => {
+  panelOpen = false;
+  panel.classList.remove("active");
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  // Smooth reveal animation on scroll
+  const ecoSteps = document.querySelectorAll('.eco-step');
+
+  const ecoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.3,
+    rootMargin: '0px 0px -100px 0px'
+  });
+
+  ecoSteps.forEach(step => {
+    ecoObserver.observe(step);
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const slideshows = document.querySelectorAll('.eco-slideshow');
+
+  slideshows.forEach(slideshow => {
+    const images = slideshow.querySelectorAll('img');
+    let current = 0;
+
+    function nextSlide() {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }
+
+    // Start with first image active
+    if (images.length > 0) {
+      images[0].classList.add('active');
+      
+      // Auto cycle every 5 seconds
+      setInterval(nextSlide, 5000);
+    }
+  });
+});
+
+
+// SEARCH PLACEHOLDER TYPING EFFECT
+const searchInput = document.getElementById("searchInput");
+
+const placeholders = [
+  "Search courses...",
+  "Search franchises...",
+  "Search services...",
+  "Search AI tools...",
+  "Search careers..."
+];
+
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typePlaceholder() {
+  if (!searchInput) return;
+
+  const currentText = placeholders[textIndex];
+  
+  if (!isDeleting) {
+    // typing
+    searchInput.placeholder = currentText.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === currentText.length) {
+      setTimeout(() => (isDeleting = true), 1200);
+    }
+  } else {
+    // deleting
+    searchInput.placeholder = currentText.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % placeholders.length;
+    }
+  }
+
+  setTimeout(typePlaceholder, isDeleting ? 50 : 90);
+}
+
+// Start animation
+typePlaceholder();
+
+
+let currentPage = 'home';
+
+function switchPage(id) {
+  const target = document.getElementById(id);
+
+   if (!target) {
+  console.warn(`switchPage: No element found with id="${id}"`);
+  return;
+}
+  if (!target || !target.classList.contains('page')) {
+    console.warn('Invalid page:', id);
+    return;
+  }
+ 
+
+  document.querySelectorAll('.page').forEach(p =>
+    p.classList.remove('active')
+  );
+
+  target.classList.add('active');
+  currentPage = id;
+
+  window.scrollTo({ top: 0 });
+
+  document.querySelectorAll('.nav-link').forEach(l =>
+    l.classList.remove('active')
+  );
+
+  const link = document.querySelector(`.nav-link[href="#${id}"]`);
+  if (link) link.classList.add('active');
+}
+
+window.switchPage = switchPage;
+
+
+function toggleFilter() {
+  const panel = document.getElementById('filterPanel');
+  panel.classList.toggle('active');
+  
+}
+
+
+
+</script>
+
+
+           
+<script>
+const heroPhrases = [
+  "Franchise Available for All Tatito Ecosystem",
+  "Collaboration with Us",
+  "Join with Us"
+];
+
+let phraseIndex = 0;
+let letterIndex = 0;
+let isErasing = false;
+
+const TYPE_SPEED = 70;
+const ERASE_SPEED = 80;
+const HOLD_DELAY = 600;
+
+function runTypingEffect() {
+  const target = document.getElementById("branchTitle");
+  if (!target) return;
+
+  const currentText = heroPhrases[phraseIndex];
+
+  if (!isErasing) {
+    target.textContent = currentText.slice(0, letterIndex + 1);
+    letterIndex++;
+
+    if (letterIndex === currentText.length) {
+      setTimeout(() => (isErasing = true), HOLD_DELAY);
+    }
+  } else {
+    target.textContent = currentText.slice(0, letterIndex - 1);
+    letterIndex--;
+
+    if (letterIndex === 0) {
+      isErasing = false;
+      phraseIndex = (phraseIndex + 1) % heroPhrases.length;
+    }
+  }
+
+  setTimeout(runTypingEffect, isErasing ? ERASE_SPEED : TYPE_SPEED);
+}
+
+/* Start typing ONLY when panel opens */
+const franchisePanel = document.getElementById("franchisePanel");
+
+if (franchisePanel) {
+  franchisePanel.addEventListener("transitionend", () => {
+    if (franchisePanel.classList.contains("active")) {
+      runTypingEffect();
+    }
+  });
+}
+
+
+
+//service page section code 
+
+function createServiceParticles(){
+  const container=document.getElementById('srvParticles');
+  const count=60;
+  for(let i=0;i<count;i++){
+    const p=document.createElement('div');
+    p.style.position='absolute';
+    p.style.width=Math.random()*3+1+'px';
+    p.style.height=p.style.width;
+    p.style.background='rgba(255,255,255,.4)';
+    p.style.borderRadius='50%';
+    p.style.left=Math.random()*100+'%';
+    p.style.top=Math.random()*100+'%';
+    p.style.animation=`float ${Math.random()*20+10}s linear infinite`;
+    container.appendChild(p);
+  }
+}
+const style=document.createElement('style');
+style.textContent=`@keyframes float{0%{transform:translateY(0)}100%{transform:translateY(-100vh)}}`;
+document.head.appendChild(style);
+
+/* ----------  COUNTER  ---------- */
+function animateServiceCounters(){
+  const counters=document.querySelectorAll('.count');
+  counters.forEach(counter=>{
+    const target=+counter.dataset.target;
+    const inc=target/200;
+    let now=0;
+    const timer=setInterval(()=>{
+      now+=inc;
+      if(now>=target){
+        now=target;
+        clearInterval(timer);
+      }
+      counter.textContent=Math.floor(now);
+    },10);
+  });
+}
+
+/* ----------  REVEAL ON SCROLL  ---------- */
+function revealServices(){
+  const reveals=document.querySelectorAll('.reveal');
+  const trigger=window.innerHeight*0.85;
+  reveals.forEach(el=>{
+    const top=el.getBoundingClientRect().top;
+    if(top<trigger) el.classList.add('active');
+  });
+}
+
+/* ----------  INIT  ---------- */
+document.addEventListener('DOMContentLoaded',()=>{
+  createServiceParticles();
+  animateServiceCounters();
+  revealServices();
+  window.addEventListener('scroll',revealServices);
+});
+
+
+
+</script>
+
+
+
+
+  <!-- SERVICES PAGE -->
+  <section id="services" class="page">
+    <div class="content">
+      <h1>Our Services</h1>
+      <p>
+        We offer a wide range of services including Voice & Non-Voice BPO,
+        Software Development, App & Game Development, and more.
+      </p>
+    </div>
+
+
+
+
+
+  <!-- =================  HERO  ================= -->
+  <section class="srv-hero">
+    <div class="srv-hero__bg"></div>
+    <div class="srv-hero__particles" id="srvParticles"></div>
+
+    <div class="container srv-hero__content">
+      <span class="srv-hero__kicker">End-to-End Digital Powerhouse</span>
+      <h1 class="srv-hero__title">
+        <span class="gradient-text">Every Service</span> You’ll Ever Need
+      </h1>
+      <p class="srv-hero__subtitle">
+        From a single voice call to a full-scale AI-driven ecosystem — we architect, build, scale and support it all under one roof.
+      </p>
+
+      <div class="srv-hero__stats">
+        <div class="stat"><span class="count" data-target="11">0</span><label>Service Lines</label></div>
+        <div class="stat"><span class="count" data-target="5000">0</span><label>Forms/Day</label></div>
+        <div class="stat"><span class="count" data-target="2200">0</span><label>Telecom Forms</label></div>
+        <div class="stat"><span class="count" data-target="99">0</span><label>% SLA Met</label></div>
+      </div>
+
+      <a href="#service-catalog" class="srv-hero__cta">
+        Explore Services <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+  </section>
+
+
+  
+    <div class="services-grid">
+
+      <article class="service-card">
+        <h3>International Voice Process</h3>
+        <span class="tag">Medicare Verification</span>
+        <ul>
+          <li>US diabetic-patient verification</li>
+          <li>Script-driven CRM workflow</li>
+          <li>Up to $2,000 / seat / month</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <h3>Non-Voice Data Entry</h3>
+        <span class="tag">Growth Fund & Telecom</span>
+        <ul>
+          <li>5,000 offline forms in 20 days</li>
+          <li>₹22 / form → ₹1.25L monthly</li>
+          <li>Telecom projects: $2,000 fixed</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <h3>Software Development</h3>
+        <span class="tag">End-to-End Delivery</span>
+        <ul>
+          <li>iOS, Android, Flutter, React Native</li>
+          <li>Next.js, Node, MongoDB</li>
+          <li>Unity, Unreal, VR/AR, Blockchain</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <h3>E-Advocate Legal Tech</h3>
+        <span class="tag">Lawyer Marketplace</span>
+        <ul>
+          <li>Web & Flutter applications</li>
+          <li>Subscription-based discovery</li>
+          <li>Secure chat, payments, bookings</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <h3>Engineering Documentation</h3>
+        <span class="tag">Design to Installation</span>
+        <ul>
+          <li>QA, fabrication, testing, install</li>
+          <li>Compliance-ready documentation</li>
+          <li>DMS & version control</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <h3>Film Production</h3>
+        <span class="tag">MV Presents</span>
+        <ul>
+          <li>Pre to post-production</li>
+          <li>VFX, sound design, editing</li>
+          <li>End-to-end studio services</li>
+        </ul>
+      </article>
+
+    </div>
+
+
+
+  <!-- =================  SERVICE CATALOG  ================= -->
+  <section id="service-catalog" class="srv-catalog">
+    <div class="container">
+
+      <!-- 1. INTERNATIONAL VOICE -->
+      <article class="srv-card reveal" data-category="bpo">
+        <div class="srv-card__header">
+          <div class="srv-card__icon"><i class="fas fa-headset"></i></div>
+          <div>
+            <h2 class="srv-card-h2">International Voice Process</h2>
+            <span class="srv-card__tag">Medicare Verification | Diabetic Healthcare</span>
+          </div>
+        </div>
+        <div class="srv-card__body">
+          <p class="srv-card__lead">
+            HIPAA-compliant Medicare verification for diabetic patients. Agents verify First Name, Last Name, Address, Pin Code against a live CRM and submit via secure portal.
+          </p>
+
+          <div class="srv-card__grid">
+            <div class="srv-card__col">
+              <h4>Workflow</h4>
+              <ol>
+                <li>Login with unique ID</li>
+                <li>Receive inbound call + screen-pop</li>
+                <li>Verify 36 data points</li>
+                <li>Copy-paste to client portal</li>
+                <li>Disposition (SALE, DNC, CALLBK…)</li>
+              </ol>
+            </div>
+            <div class="srv-card__col">
+              <h4>Tech Stack</h4>
+              <ul>
+                <li>WebRTC soft-phone</li>
+                <li>AI noise-cancellation</li>
+                <li>Real-time QA whisper</li>
+                <li>CRM: Salesforce Health Cloud</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="srv-card__footer">
+            <div class="srv-card__metric">
+              <strong>210-374-2902</strong> sample disposition
+            </div>
+            <a href="#contact" class="srv-card__btn">Learn More</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. INTERNATIONAL NON-VOICE -->
+      <article class="srv-card reveal" data-category="bpo">
+        <div class="srv-card__header">
+          <div class="srv-card__icon"><i class="fas fa-file-contract"></i></div>
+          <div>
+            <h2 class="srv-card-h2">International Non-Voice</h2>
+            <span class="srv-card__tag">Growth Fund (Offline) | Telecom (Online)</span>
+          </div>
+        </div>
+        <div class="srv-card__body">
+          <div class="srv-card__grid">
+            <div class="srv-card__col">
+              <h4>Growth Fund – Offline</h4>
+              <ul>
+                <li>5 000 forms / 20 working days</li>
+                <li>36 fields per form</li>
+                <li>Accuracy-based payout: ₹22 / form</li>
+                <li>Max earning: ₹1 25 000 / seat / month</li>
+              </ul>
+            </div>
+            <div class="srv-card__col">
+              <h4>Telecom – Online</h4>
+              <ul>
+                <li>100 forms/day, 2 200 total</li>
+                <li>50-60 fields per form</li>
+                <li>Fixed: $2 000 USD / seat / month</li>
+                <li>Zero accuracy clause</li>
+              </ul>
+            </div>
+          </div>
+          <div class="srv-card__note">
+            <i class="fas fa-info-circle"></i>
+            11-month renewable contract, online/on-site training, demo forms, 24×7 tech support.
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. DOMESTIC VOICE -->
+      <article class="srv-card reveal" data-category="bpo">
+        <div class="srv-card__header">
+          <div class="srv-card__icon"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <h2 class="srv-card-h2">Domestic Voice Process</h2>
+            <span class="srv-card__tag">24×7 Inbound | Banking & Fintech</span>
+          </div>
+        </div>
+        <div class="srv-card__body">
+          <p>Graduate-level agents handle credit-card, banking, and recovery calls with neutral accent, probing skills, and upsell targets.</p>
+          <div class="srv-card__grid">
+            <div class="srv-card__col">
+              <h4>Channels</h4>
+              <ul>
+                <li>Inbound, Outbound, Web-Call (VoIP)</li>
+                <li>ACD, IVR, Predictive Dialer</li>
+                <li>CRM: Zendesk, Freshdesk</li>
+              </ul>
+            </div>
+            <div class="srv-card__col">
+              <h4>SLA</h4>
+              <ul>
+                <li>80/20 rule, <2 min ASA</li>
+                <li>95 % FCR, 4.8/5 CSAT</li>
+                <li>PCI-DSS compliant</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. SOFT TECHNOLOGIES -->
+      <article class="srv-card reveal" data-category="tech">
+        <div class="srv-card__header">
+          <div class="srv-card__icon"><i class="fas fa-code"></i></div>
+          <div>
+            <h2 class="srv-card-h2">Soft Technologies</h2>
+            <span class="srv-card__tag">Training & Certification</span>
+          </div>
+        </div>
+        <div class="srv-card__body">
+          <p>Industry-aligned courses with live projects, mentorship, and placement assistance.</p>
+
+          <div class="srv-card__table-wrapper">
+            <table class="srv-table">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Duration</th>
+                  <th>Projects</th>
+                  <th>Certification</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>C / C++</td>
+                  <td>8 weeks</td>
+                  <td>3 (System, Embedded, Game)</td>
+                  <td>ISO 17024</td>
+                </tr>
+                <tr>
+                  <td>Java Full-Stack</td>
+                  <td>16 weeks</td>
+                  <td>5 (Spring Boot, Microservices)</td>
+                  <td>OCAJP + Project</td>
+                </tr>
+                <tr>
+                  <td>Python Full-Stack</td>
+                  <td>14 weeks</td>
+                  <td>4 (Django, FastAPI, ML)</td>
+                  <td>PCAP + TensorFlow</td>
+                </tr>
+                <tr>
+                  <td>Oracle DBA</td>
+                  <td>10 weeks</td>
+                  <td>2 (RAC, Data Guard)</td>
+                  <td>OCP</td>
+                </tr>
+                <tr>
+                  <td>Digital Marketing</td>
+                  <td>6 weeks</td>
+                  <td>Live Ad Spend ₹50 k</td>
+                  <td>Google & Meta</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- 5. SOFTWARE PROJECTS -->
+      <article class="srv-card reveal" data-category="tech">
+        <div class="srv-card__header">
+          <div class="srv-card__icon"><i class="fas fa-layer-group"></i></div>
+          <div>
+            <h2 class="srv-card-h2">Software Projects</h2>
+            <span class="srv-card__tag">App | Game | Web | Blockchain</span>
+          </div>
+        </div>
+        <div class="srv-card__body">
+          <div class="srv-card__grid">
+            <div class="srv-card__col">
+              <h4>App Development</h4>
+              <ul>
+                <li>Native iOS/Android</li>
+                <li>Cross-platform: Flutter, React Native</li>
+                <li>CI/CD with Fastlane & Bitrise</li>
+              </ul>
+            </div>
+            <div class="srv-card__col">
+              <h4>Game Development</h4>
+              <ul>
+                <li>Unity 3D, Unreal Engine 5</li>
+                <li>AR/VR with ARKit, ARCore</li>
+                <li>Multi-player Photon / Mirror</li>
+              </ul>
+            </div>
+            <div class="srv-card__col">
+              <h4>Blockchain</h4>
+              <ul>
+                <li>Smart Contracts – Solidity, Rust</li>
+                <li>DeFi, NFT Marketplaces</li>
+                <li>Audit & Pen-testing</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="srv-showcase">
+            <div class="showcase-item">
+              <img src="https://via.placeholder.com/300x200/667eea/ffffff?text=EvolveZen" alt="EvolveZen">
+              <h5>EvolveZen</h5>
+              <p>AI avatar generator – 10 M+ downloads, 4.2★</p>
+            </div>
+            <div class="showcase-item">
+              <img src="https://via.placeholder.com/300x200/764ba2/ffffff?text=SleepZen" alt="SleepZen">
+              <h5>SleepZen</h5>
+              <p>Sleep tracker + 300+ sounds, 250+ meditations</p>
+            </div>
+            <div class="showcase-item">
+              <img src="https://via.placeholder.com/300x200/f093fb/ffffff?text=AppLock" alt="AppLock">
+              <h5>AppLock</h5>
+              <p>Biometric + pattern lock, intruder selfie</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. E-ADVOCATE SERVICES -->
+      <article class="srv-card reveal" data-category="legal">
+        <div class="srv-card__header">
+          <div class="srv-card__icon"><i class="fas fa-balance-scale"></i></div>
+          <div>
+            <h2 class="srv-card-h2">E-Advocate Services</h2>
+            <span class="srv-card__tag">Web & Mobile | Subscription LegalTech</span>
+          </div>
+        </div>
+        <div class="srv-card__body">
+          <p>Connect clients with verified lawyers through a secure, subscription-based platform.</p>
+
+          <div class="srv-card__grid">
+            <div class="srv-card__col">
+              <h4>Features</h4>
+              <ul>
+                <li>Lawyer profiles with ratings & reviews</li>
+                <li>Video consultation & e-signature</li>
+                <li>Case management dashboard</li>
+                <li>Payment gateway + subscription tiers</li>
+              </ul>
+            </div>
+            <div class="srv-card__col">
+              <h4>Tech Stack</h4>
+              <ul>
+                <li>Next.js (SSR) + Flutter</li>
+                <li>Node.js, MongoDB, Redis</li>
+                <li>WebRTC, Socket.io</li>
+                <li>Stripe, PayPal, UPI</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="srv-card__note">
+            <i class="fas fa-shield-alt"></i>
+            End-to-end encryption, GDPR & Indian IT-Act compliance.
+          </div>
+        </div>
+      </article>
+
+      <!-- 7. ENGINEERING DOCUMENTATION -->
+      <article class="srv-card reveal" data-category="engineering">
+        <div class="srv-card__header">
+          <div class="srv-card__icon"><i class="fas fa-drafting-compass"></i></div>
+          <div>
+            <h2 class="srv-card-h2">Engineering Project Documentation</h2>
+            <span class="srv-card__tag">CAD | QA | Fabrication | Installation</span>
+          </div>
+        </div>
+        <div class="srv-card__body">
+          <p>Turn-key documentation that slashes production delays by 40 %.</p>
+
+          <div class="srv-card__grid">
+            <div class="srv-card__col">
+              <h4>Deliverables</h4>
+              <ul>
+                <li>2D/3D CAD drawings (AutoCAD, SolidWorks)</li>
+                <li>GD&T, BOM, DFMEA</li>
+                <li>Test plans & validation reports</li>
+                <li>Installation & O&M manuals</li>
+              </ul>
+            </div>
+            <div class="srv-card__col">
+              <h4>Industries</h4>
+              <ul>
+                <li>Heavy Machinery</li>
+                <li>Renewable Energy</li>
+                <li>Medical Devices</li>
+                <li>Automotive Tier-1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8. FILM INDUSTRY -->
+      <article class="srv-card reveal" data-category="creative">
+        <div class="srv-card__header">
+          <div class="srv-card__icon"><i class="fas fa-film"></i></div>
+          <div>
+            <h2 class="srv-card-h2">Film Industry Services</h2>
+            <span class="srv-card__tag">Pre to Post | 4K | VFX | Distribution</span>
+          </div>
+        </div>
+        <div class="srv-card__body">
+          <p>End-to-end production house under one roof.</p>
+
+          <div class="srv-card__grid">
+            <div class="srv-card__col">
+              <h4>Pre-Production</h4>
+              <ul>
+                <li>Script development & storyboarding</li>
+                <li>Location scouting & casting</li>
+                <li>Budgeting & scheduling</li>
+              </ul>
+            </div>
+            <div class="srv-card__col">
+              <h4>Production</h4>
+              <ul>
+                <li>4K/8K cinema cameras</li>
+                <li>Drone & gimbal ops</li>
+                <li>On-set DIT & live grading</li>
+              </ul>
+            </div>
+            <div class="srv-card__col">
+              <h4>Post-Production</h4>
+              <ul>
+                <li>Editing (Premiere, Resolve)</li>
+                <li>VFX (After Effects, Nuke)</li>
+                <li>Color grading (HDR10, Dolby Vision)</li>
+                <li>Sound design (5.1, Atmos)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9. COMPETITIVE EXAMS -->
+      <article class="srv-card reveal" data-category="education">
+        <div class="srv-card__header">
+          <div class="srv-card__icon"><i class="fas fa-trophy"></i></div>
+          <div>
+            <h2 class="srv-card-h2">Competitive Exams & Olympiads</h2>
+            <span class="srv-card__tag">TSTSE | TSTCE | Scholarship ₹1 500/mo</span>
+          </div>
+        </div>
+        <div class="srv-card__body">
+          <p>International-level talent search for students Grade 1 – PG.</p>
+
+          <div class="srv-card__grid">
+            <div class="srv-card__col">
+              <h4>Exam Format</h4>
+              <ul>
+                <li>Online (webcam proctored) or Paper-based</li>
+                <li>Subjects: Mental Ability, Math, Science, English</li>
+                <li>Negative marking, AI anti-cheating</li>
+              </ul>
+            </div>
+            <div class="srv-card__col">
+              <h4>Rewards</h4>
+              <ul>
+                <li>Gold Medal + ₹1 500/month (Rank 1)</li>
+                <li>Silver Medal + ₹1 000/month (Rank 2)</li>
+                <li>Bronze Medal + ₹500/month (Rank 3)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="srv-card__note">
+            <i class="fas fa-calendar-alt"></i>
+            Next exam: 4th Feb | Registration closes 15th Oct
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- =================  PRICING TABLE  ================= -->
+  <!-- <section class="srv-pricing">
+    <div class="container">
+      <h2 class="section-title">Transparent Pricing</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <h3>Voice Process</h3>
+          <div class="price">$8 <span>/ agent / hr</span></div>
+          <ul>
+            <li>24×7 coverage</li>
+            <li>QA & recording</li>
+            <li>Daily reports</li>
+          </ul>
+          <a href="#contact" class="pricing-btn">Get Quote</a>
+        </div>
+        <div class="pricing-card reveal popular">
+          <div class="badge">Most Popular</div>
+          <h3>Non-Voice</h3>
+          <div class="price">$2 000 <span>/ seat / mo</span></div>
+          <ul>
+            <li>2 200 forms</li>
+            <li>Zero accuracy clause</li>
+            <li>Weekly payout</li>
+          </ul>
+          <a href="#contact" class="pricing-btn">Start Trial</a>
+        </div>
+        <div class="pricing-card reveal">
+          <h3>Custom Dev</h3>
+          <div class="price">$25 <span>/ hour</span></div>
+          <ul>
+            <li>Agile sprints</li>
+            <li>Source code handover</li>
+            <li>30-day support</li>
+          </ul>
+          <a href="#contact" class="pricing-btn">Discuss Scope</a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- =================  CTA  ================= -->
+  <section class="srv-cta">
+    <div class="container">
+      <h2>Ready to Launch Your Next Project?</h2>
+      <p>Get a free consultation and POC within 48 hours.</p>
+      <a href="#contact" class="srv-cta__btn">Book a Call</a>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+          
+
+<button id="chatToggle" aria-label="Open Tatito AI Chat">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l5.71-1.97C9 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<!-- Chat window -->
+<div id="chatWindow" class="chat-window">
+  <div class="chat-header">
+    <img src="logoo.png" alt="Tatito" class="chat-avatar">
+    <div>
+      <h4>Tatito AI</h4>
+      <span class="chat-status">Online</span>
+    </div>
+    <button id="chatClose" aria-label="Close chat">×</button>
+  </div>
+
+  <div id="chatMessages" class="chat-messages">
+    <div class="bot-msg">
+      <p>Hey! I’m Tatito AI — ask me anything about our ecosystem, services, or franchise opportunities.</p>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input id="chatInput" type="text" placeholder="Type a keyword… e.g. franchise, edverse, pricing" autocomplete="off">
+    <button id="chatSend" aria-label="Send">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+
+
+
+<script>
+/* ======  KEYWORD-BASED AI CHATBOT  ====== */
+(() => {
+  const knowledge = {
+    franchise: {
+      reply: `🚀 <strong>Franchise Opportunities</strong><br>
+              Own a Tatito vertical (Edverse, Career Hub, Health+, Civic One, Fashions).<br>
+              <em>Investment:</em> ₹5L–₹20L<br>
+              <em>Support:</em> Tech, training, marketing, ops.<br>
+              <a href="#franchise" onclick="switchPage('franchise');toggleChat()">Apply now →</a>`
+    },
+    edverse: {
+      reply: `📚 <strong>Tatito Edverse</strong><br>
+              10,000+ courses, AI mentoring, LMS, certifications.<br>
+              Revenue: enrollments, subscriptions, white-label.`
+    },
+    career: {
+      reply: `💼 <strong>Career Hub</strong><br>
+              Job matching, resume AI, interview prep, employer network.<br>
+              Franchise revenue from placements & training.`
+    },
+    health: {
+      reply: `🏥 <strong>Health+</strong><br>
+              Tele-medicine, AI symptom checker, health records, wellness plans.<br>
+              Subscription + consultation model.`
+    },
+    civic: {
+      reply: `🏛️ <strong>Civic One</strong><br>
+              Digital governance, e-voting, citizen services, transparent feedback.<br>
+              Govt & NGO partnerships.`
+    },
+    fashion: {
+      reply: `👗 <strong>Tatito Fashions</strong><br>
+              Digital wardrobe, AR try-on, NFT fashion, designer marketplace.<br>
+              Revenue: sales, drops, subscriptions.`
+    },
+    pricing: {
+      reply: `💰 <strong>Pricing</strong><br>
+              Voice: $8/agent/hr<br>
+              Non-voice: $2,000/seat/mo<br>
+              Custom dev: $25/hr<br>
+              <a href="#services" onclick="switchPage('services');toggleChat()">See full table →</a>`
+    },
+    contact: {
+      reply: `📞 <strong>Contact Us</strong><br>
+              Tirupati, AP 517501<br>
+              <a href="mailto:tatitoprojects@gmail.com">tatitoprojects@gmail.com</a><br>
+              +91 70937 04706`
+    },
+    default: {
+      reply: `🤖 I can help with: <em>franchise, edverse, career, health, civic, fashion, pricing, contact</em>.<br>
+              Try typing one of those keywords!`
+    }
+  };
+
+  const chatToggle = document.getElementById('chatToggle');
+  const chatWindow = document.getElementById('chatWindow');
+  const chatClose  = document.getElementById('chatClose');
+  const chatInput  = document.getElementById('chatInput');
+  const chatSend   = document.getElementById('chatSend');
+  const chatMessages = document.getElementById('chatMessages');
+
+  function toggleChat() {
+    chatWindow.classList.toggle('open');
+  }
+  chatToggle.addEventListener('click', toggleChat);
+  chatClose.addEventListener('click', toggleChat);
+
+  function appendMsg(text, sender = 'bot') {
+    const div = document.createElement('div');
+    div.className = sender === 'bot' ? 'bot-msg' : 'user-msg';
+    div.innerHTML = text;
+    chatMessages.appendChild(div);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function handleInput() {
+    const raw = chatInput.value.trim();
+    if (!raw) return;
+    appendMsg(raw, 'user');
+    chatInput.value = '';
+
+    const key = Object.keys(knowledge).find(k => raw.toLowerCase().includes(k));
+    const data = knowledge[key] || knowledge.default;
+    setTimeout(() => appendMsg(data.reply), 400);
+  }
+
+  chatSend.addEventListener('click', handleInput);
+  chatInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') handleInput();
+  });
+
+  /* Expose toggle globally if needed */
+  window.toggleChat = toggleChat;
+})();
+</script>
+
+
+
+
+<!-- 
+<audio id="bgMusic" loop>
+  <source src="/music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.addEventListener("click", () => {
+    const music = document.getElementById("bgMusic");
+    music.play();
+  }, { once: true });
+</script> -->
+
+<audio id="bgMusic" loop>
+  <source src="/music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-mini" id="musicUI">
+  <button id="playBtn">▶</button>
+  <button id="stopBtn">■</button>
+</div>
+
+
+
+<!-- ========== LEGAL PAGES ========== -->
+<div id="fraud-alert" class="page">
+
+  <section class="section legal-page">
+    <button class="legal-close" onclick="closeLegalPage()">✕</button>
+
+    <h1>Fraud Alert & Public Notice</h1>
+    <p><strong>E-Advocate Services</strong> – Last updated: [Add Date]</p>
+    <p>We have observed instances where unauthorized individuals impersonate advocates or misuse our name.  
+    <strong>Such activities are fraudulent and illegal.</strong></p>
+    <h3>What We NEVER Do</h3>
+    <ul>
+      <li>Guarantee court results</li>
+      <li>Ask for OTPs, passwords, or banking details</li>
+      <li>Send payment links via unofficial numbers</li>
+    </ul>
+    <h3>How to Report</h3>
+    <p>Email: <a href="mailto:[official support email]">[official support email]</a>  
+    Subject: <strong>FRAUD ALERT – URGENT</strong></p>
+  </section>
+</div>
+
+<div id="terms" class="page">
+  <section class="section legal-page">
+        <button class="legal-close" onclick="closeLegalPage()">✕</button>
+
+    <h1>Terms of Use</h1>
+    <p><strong>E-Advocate Services</strong> – Last updated: [Add Date]</p>
+    <p>By accessing the Platform you agree to be bound by these Terms.</p>
+    <h3>Key Points</h3>
+    <ul>
+      <li>We are a <strong>technology facilitation platform only</strong>; we do not provide legal advice.</li>
+      <li>Advocates must be enrolled with a State Bar Council.</li>
+      <li>Users must be 18+ and provide accurate information.</li>
+    </ul>
+  </section>
+</div>
+
+<div id="third-party" class="page">
+  <section class="section legal-page">
+        <button class="legal-close" onclick="closeLegalPage()">✕</button>
+
+    <h1>Third-Party Terms of Use</h1>
+    <p>We integrate third-party services (hosting, payments, analytics, etc.).  
+    These services are governed by their own terms.</p>
+    <ul>
+      <li>We do not control or guarantee third-party availability.</li>
+      <li>Users are subject to third-party policies when using integrated features.</li>
+    </ul>
+  </section>
+</div>
+
+<div id="privacy" class="page">
+  <section class="section legal-page">
+        <button class="legal-close" onclick="closeLegalPage()">✕</button>
+
+    <h1>Privacy Policy</h1>
+    <h3>Information We Collect</h3>
+    <ul>
+      <li><strong>Clients:</strong> Name, mobile, email, location, case details (voluntary).</li>
+      <li><strong>Advocates:</strong> Name, enrollment number, practice areas, verification docs.</li>
+      <li><strong>Automatic:</strong> IP, device info, logs (for security & performance).</li>
+    </ul>
+    <h3>Your Rights</h3>
+    <p>Access, correct, delete, or withdraw consent by emailing <a href="mailto:[official support email]">[official support email]</a>.</p>
+  </section>
+</div>
+
+<div id="cookie" class="page">
+  <section class="section legal-page">
+        <button class="legal-close" onclick="closeLegalPage()">✕</button>
+
+    <h1>Cookie Policy</h1>
+    <p>We use cookies for:</p>
+    <ul>
+      <li>Essential functions (login, security)</li>
+      <li>Performance & analytics (anonymous)</li>
+    </ul>
+    <p>We do <strong>not</strong> use cookies for advertising or tracking across sites.</p>
+  </section>
+</div>
+
+<div id="privacy-features" class="page">
+  <section class="section legal-page">
+        <button class="legal-close" onclick="closeLegalPage()">✕</button>
+
+    <h1>Privacy Features</h1>
+    <ul>
+      <li>Minimal data collection</li>
+      <li>Encrypted transmission</li>
+      <li>No advertising or data selling</li>
+      <li>User-controlled profile visibility</li>
+      <li>Secure OTP/password login</li>
+    </ul>
+  </section>
+</div>
+
+<div id="summons" class="page">
+  <section class="section legal-page">
+        <button class="legal-close" onclick="closeLegalPage()">✕</button>
+
+    <h1>Summons / Legal Notices</h1>
+    <p>All legal notices must be sent to:</p>
+    <p><strong>Email:</strong> <a href="mailto:[legal@yourdomain.com]">[legal@yourdomain.com]</a></p>
+    <p>Notices sent via personal email, WhatsApp, or social media will <strong>not</strong> be considered valid.</p>
+  </section>
+</div>
+
+<div id="grievances" class="page">
+  <section class="section legal-page">
+        <button class="legal-close" onclick="closeLegalPage()">✕</button>
+
+    <h1>Grievance Redressal Mechanism</h1>
+    <p><strong>Grievance Officer:</strong> [Authorized Person Name]</p>
+    <p><strong>Email:</strong> <a href="mailto:[grievance@yourdomain.com]">[grievance@yourdomain.com]</a></p>
+    <ul>
+      <li>Acknowledgement within 24–48 hours</li>
+      <li>Resolution within 15 days</li>
+    </ul>
+  </section>
+</div>
+
+<div id="refund" class="page">
+  <section class="section legal-page">
+        <button class="legal-close" onclick="closeLegalPage()">✕</button>
+
+    <h1>Refund Policy</h1>
+    <p><strong>Advocate fees are non-refundable</strong> and decided directly between advocate and client.</p>
+    <p>Platform fees may be refunded only if:</p>
+    <ul>
+      <li>Service was not activated after payment</li>
+      <li>Duplicate payment due to technical error</li>
+    </ul>
+    <p>Request refunds at <a href="mailto:[official support email]">[official support email]</a> with payment reference.</p>
+  </section>
+</div>
+
+
+<script>
+let lastPage = 'home';
+
+// Track last page before switching
+const originalSwitchPage = window.switchPage;
+window.switchPage = function (id) {
+  const isLegal = ['fraud-alert', 'terms', 'third-party', 'privacy', 'cookie', 'privacy-features', 'summons', 'grievances', 'refund'].includes(id);
+  if (isLegal) {
+    lastPage = currentPage;
+    document.body.style.overflow = 'hidden'; // lock scroll
+  }
+  originalSwitchPage(id);
+};
+
+// Close legal page and go back
+function closeLegalPage() {
+  document.body.style.overflow = ''; // restore scroll
+  switchPage(lastPage);
+}
+</script>
+<script>
+  const music = document.getElementById("bgMusic");
+  const playBtn = document.getElementById("playBtn");
+  const stopBtn = document.getElementById("stopBtn");
+  const ui = document.getElementById("musicUI");
+
+  let fadeInterval;
+
+  function fadeIn(target = 0.1, duration = 2000) {
+    clearInterval(fadeInterval);
+    music.volume = 0;
+    music.play();
+
+    let step = 0;
+    const steps = 40;
+
+    fadeInterval = setInterval(() => {
+      step++;
+      music.volume = Math.min((target / steps) * step, target);
+      if (step >= steps) clearInterval(fadeInterval);
+    }, duration / steps);
+  }
+
+  // Safe autoplay on first interaction
+  document.addEventListener("click", () => {
+    fadeIn();
+  }, { once: true });
+
+  // ▶ Play
+  playBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (music.paused) fadeIn();
+  });
+
+  // ■ Stop (real stop)
+  stopBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    clearInterval(fadeInterval);
+    music.pause();
+    music.currentTime = 0;
+  });
+
+  // 👻 Auto-hide when idle
+  let hideTimeout;
+  const showUI = () => {
+    ui.style.opacity = 1;
+    clearTimeout(hideTimeout);
+    hideTimeout = setTimeout(() => {
+      ui.style.opacity = 0.25;
+    }, 3000);
+  };
+
+  document.addEventListener("mousemove", showUI);
+  document.addEventListener("click", showUI);
+</script>
+
+<section class="tatito-modal" id="tatitoModal">
+  <div class="tatito-overlay"></div>
+
+  <div class="tatito-popup">
+    <button class="tatito-close">&times;</button>
+    <h2>Tatito Ecosystem</h2>
+    <p>Direct contact for each Tatito Vertical</p>
+
+    <div class="tatito-grid">
+
+      <div class="tatito-card">
+        <h3>Tatito Nexus</h3>
+        <a href="mailto:nexus@tatito.com">nexus@tatito.com</a>
+        <a href="https://wa.me/919876543210">+91 98765 43210</a>
+      </div>
+
+      <div class="tatito-card">
+        <h3>Tatito Edverse</h3>
+        <a href="mailto:edverse@tatito.com">edverse@tatito.com</a>
+        <a href="https://tatito.com/edverse">tatito.com/edverse</a>
+      </div>
+
+      <div class="tatito-card">
+        <h3>Tatito Career Hub</h3>
+        <a href="mailto:careers@tatito.com">careers@tatito.com</a>
+        <a href="https://tatito.com/careers">tatito.com/careers</a>
+      </div>
+
+      <div class="tatito-card">
+        <h3>Tatito Health+</h3>
+        <a href="mailto:health@tatito.com">health@tatito.com</a>
+        <a href="tel:+919812345678">+91 98123 45678</a>
+      </div>
+
+      <div class="tatito-card">
+        <h3>Tatito Civic One</h3>
+        <a href="mailto:civic@tatito.com">civic@tatito.com</a>
+        <a href="https://tatito.com/civic">tatito.com/civic</a>
+      </div>
+
+      <div class="tatito-card">
+        <h3>Tatito E-Advocate</h3>
+        <a href="mailto:legal@tatito.com">legal@tatito.com</a>
+        <a href="tel:+919900112233">+91 99001 12233</a>
+      </div>
+
+      <div class="tatito-card">
+        <h3>Tatito Fashions</h3>
+        <a href="mailto:fashion@tatito.com">fashion@tatito.com</a>
+        <a href="https://tatito.com/fashion">tatito.com/fashion</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script>
+const openBtn=document.getElementById("openTatitoModal");
+const modal=document.getElementById("tatitoModal");
+const closeBtn=modal.querySelector(".tatito-close");
+const overlay=modal.querySelector(".tatito-overlay");
+
+openBtn.onclick=()=>modal.classList.add("active");
+closeBtn.onclick=overlay.onclick=()=>modal.classList.remove("active");
+</script>
+
+<!-- 
+<script>
+let current = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index) {
+  slides.forEach(s => s.classList.remove("active"));
+  dots.forEach(d => d.classList.remove("active"));
+
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+}
+
+function nextSlide() {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}
+
+function prevSlide() {
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+}
+
+function goSlide(index) {
+  current = index;
+  showSlide(current);
+}
+</script> -->
+
+<script>
+function scrollServicesBottom() {
+  const page = document.getElementById("services");
+  if (!page) return;
+
+  page.scrollTo({
+    top: page.scrollHeight,
+    behavior: "smooth"
+  });
+}
+</script>
+
+
+
+
+
+
+<script>
+/* =========  SHOWCASE LOGIC  ========= */
+const track=document.getElementById('showcaseTrack');
+const slides=[...track.children];
+const dots=[...document.querySelectorAll('.ctrl-dots .dot')];
+const prevBtn=document.querySelector('.ctrl-btn.prev');
+const nextBtn=document.querySelector('.ctrl-btn.next');
+let current=0;
+
+function go(index){
+  slides.forEach((s,i)=>{
+    s.classList.toggle('active',i===index);
+    s.classList.toggle('prev',i<index);
+  });
+  dots.forEach((d,i)=>d.classList.toggle('active',i===index));
+  current=index;
+}
+function next(){go((current+1)%slides.length);}
+function prev(){go((current-1+slides.length)%slides.length);}
+
+nextBtn.addEventListener('click',next);
+prevBtn.addEventListener('click',prev);
+dots.forEach((d,i)=>d.addEventListener('click',()=>go(i)));
+
+// auto-play
+let auto=setInterval(next,3000);
+track.addEventListener('mouseenter',()=>clearInterval(auto));
+track.addEventListener('mouseleave',()=>auto=setInterval(next,5000));
+</script>
+<script>
+// Sample dummy data
+let users = [
+  { id: 1, name: "John Doe", email: "john@example.com", status: "active" },
+  { id: 2, name: "Jane Smith", email: "jane@example.com", status: "pending" },
+  { id: 3, name: "Mike Johnson", email: "mike@example.com", status: "active" },
+  { id: 4, name: "Sarah Wilson", email: "sarah@example.com", status: "inactive" }
+];
+
+let franchises = [
+  { id: 1, name: "Mumbai Central", location: "Mumbai, MH", status: "active", revenue: "₹450K" },
+  { id: 2, name: "Delhi NCR", location: "Delhi", status: "pending", revenue: "₹320K" },
+  { id: 3, name: "Bangalore Hub", location: "Bangalore, KA", status: "active", revenue: "₹680K" }
+];
+
+let announcements = [
+  { id: 1, title: "New Feature Launch", content: "We've launched advanced analytics!", date: "2025-06-20" },
+  { id: 2, title: "Maintenance Notice", content: "Scheduled maintenance on June 25th", date: "2025-06-18" }
+];
+
+// Show Login Form
+function showLogin() {
+  document.querySelectorAll('.form').forEach(form => form.classList.remove('active'));
+  document.querySelector('.login').classList.add('active');
+}
+
+// Show Register Form
+function showRegister() {
+  document.querySelectorAll('.form').forEach(form => form.classList.remove('active'));
+  document.querySelector('.register').classList.add('active');
+}
+
+// Show Admin Login Form
+function showAdminLogin() {
+  document.querySelectorAll('.form').forEach(form => form.classList.remove('active'));
+  document.querySelector('.admin-login').classList.add('active');
+}
+
+// Handle regular user login (currently just a placeholder)
+function handleLogin(e) {
+  e.preventDefault();
+  alert("User login not yet implemented. Please use Admin Login for demo.");
+}
+
+// Handle registration (dummy success)
+function handleRegister(e) {
+  e.preventDefault();
+  alert("Registration successful! You can now login.");
+  showLogin();
+}
+
+// Handle Admin Login - This is the main working login for your demo
+function handleAdminLogin(e) {
+  e.preventDefault();
+  
+  const identifier = document.getElementById('adminIdentifier').value.trim().toLowerCase();
+  const password = document.getElementById('adminPassword').value;
+
+  // Dummy admin credentials - you can change these later
+  if ((identifier === "admin@tatito.com" || identifier === "admin") && password === "admin123") {
+    // Hide login page
+    document.getElementById('login').style.display = 'none';
+    
+    // Show admin dashboard
+    const dashboard = document.getElementById('adminDashboard');
+    if (dashboard) {
+      dashboard.classList.add('active');
+      loadDashboardData();
+      showSection('dashboard'); // Show dashboard overview first
+    } else {
+      alert("Error: #adminDashboard element not found in HTML!");
+    }
+  } else {
+    alert("Invalid admin credentials.\n\nHint: Use email 'admin@tatito.com' and password 'admin123'");
+  }
+}
+
+// Button clicks from the left panel
+document.getElementById('switchBtn').addEventListener('click', showRegister);
+document.getElementById('adminBtn').addEventListener('click', showAdminLogin);
+
+// Show different dashboard sections
+function showSection(section) {
+  document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.sidebar-menu a').forEach(a => a.classList.remove('active'));
+  
+  document.getElementById(section).classList.add('active');
+  
+  // Highlight the clicked menu item (assuming it has an onclick="showSection('id')")
+  if (event && event.target) {
+    event.target.classList.add('active');
+  }
+
+  // Load data when switching to these sections
+  if (section === 'users') loadUsers();
+  if (section === 'franchise') loadFranchises();
+  if (section === 'announcements') loadAnnouncements();
+}
+
+// Load dashboard summary cards
+function loadDashboardData() {
+  document.getElementById('totalUsers').textContent = users.length;
+  document.getElementById('totalFranchise').textContent = franchises.length;
+  document.getElementById('totalAnnouncements').textContent = announcements.length;
+}
+
+// Load users table
+function loadUsers() {
+  const tbody = document.getElementById('usersTable');
+  if (!tbody) return;
+  tbody.innerHTML = '';
+
+  users.forEach(user => {
+    const row = tbody.insertRow();
+    row.innerHTML = `
+      <td>${user.id}</td>
+      <td>${user.name}</td>
+      <td>${user.email}</td>
+      <td><span class="status-badge ${user.status}">${user.status}</span></td>
+      <td>
+        <button onclick="editUser(${user.id})"><i class="fas fa-edit"></i></button>
+        <button onclick="deleteUser(${user.id})"><i class="fas fa-trash"></i></button>
+      </td>
+    `;
+  });
+}
+
+// Load franchises table
+function loadFranchises() {
+  const tbody = document.getElementById('franchiseTable');
+  if (!tbody) return;
+  tbody.innerHTML = '';
+
+  franchises.forEach(franchise => {
+    const row = tbody.insertRow();
+    row.innerHTML = `
+      <td>${franchise.id}</td>
+      <td>${franchise.name}</td>
+      <td>${franchise.location}</td>
+      <td><span class="status-badge ${franchise.status}">${franchise.status}</span></td>
+      <td>${franchise.revenue}</td>
+    `;
+  });
+}
+
+// Load announcements
+function loadAnnouncements() {
+  const container = document.getElementById('announcementsList');
+  if (!container) return;
+  container.innerHTML = '';
+
+  announcements.forEach(ann => {
+    const div = document.createElement('div');
+    div.style.cssText = 'padding: 20px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border-radius: 8px;';
+    div.innerHTML = `
+      <h3>${ann.title}</h3>
+      <p>${ann.content}</p>
+      <small style="color: var(--text-muted)">${ann.date}</small>
+    `;
+    container.appendChild(div);
+  });
+}
+
+// CRUD helpers
+function addUser() {
+  const name = prompt("Enter user name:");
+  const email = prompt("Enter email:");
+  if (name && email) {
+    users.push({ id: users.length + 1, name, email, status: "active" });
+    loadUsers();
+    loadDashboardData();
+  }
+}
+
+function editUser(id) {
+  alert("Edit functionality can be added here (ID: " + id + ")");
+}
+
+function deleteUser(id) {
+  if (confirm("Delete this user?")) {
+    users = users.filter(u => u.id !== id);
+    loadUsers();
+    loadDashboardData();
+  }
+}
+
+function addFranchise() {
+  const name = prompt("Enter franchise name:");
+  const location = prompt("Enter location:");
+  if (name && location) {
+    franchises.push({ 
+      id: franchises.length + 1, 
+      name, 
+      location, 
+      status: "pending", 
+      revenue: "₹0" 
+    });
+    loadFranchises();
+    loadDashboardData();
+  }
+}
+
+function addAnnouncement() {
+  const title = prompt("Enter announcement title:");
+  const content = prompt("Enter content:");
+  if (title && content) {
+    announcements.push({
+      id: announcements.length + 1,
+      title,
+      content,
+      date: new Date().toISOString().split('T')[0]
+    });
+    loadAnnouncements();
+    loadDashboardData();
+  }
+}
+
+function saveSettings() {
+  alert("Settings saved successfully!");
+}
+
+function refreshData() {
+  loadDashboardData();
+  alert("Data refreshed!");
+}
+
+function logout() {
+  // Hide dashboard
+  document.getElementById('adminDashboard').classList.remove('active');
+  // Show login page again
+  document.getElementById('login').style.display = 'flex';
+  // Reset to default login form
+  showLogin();
+}
+
+// Run on page load
+document.addEventListener('DOMContentLoaded', () => {
+  // Ensure dashboard is hidden at start
+  const dashboard = document.getElementById('adminDashboard');
+  if (dashboard) dashboard.classList.remove('active');
+  
+  // Default: show login form
+  showLogin();
+});
+</script>
+
+
+
+<!-- ================= USER LOGIN / REGISTER ================= -->
+<section id="login" class="page">
+  <div class="auth-shell">
+    <div class="auth-panel auth-info">
+      <h1>Welcome to TATITO</h1>
+      <img src="loginfea.png" alt="Tatito Logo" class="auth-logo" />
+      <p>One account. Multiple ecosystems.<br>
+      Access your digital identity.</p>
+      <button id="switchBtn">Create Account →</button>
+      <button id="adminBtn">Admin Login</button>
+    </div>
+
+    <div class="auth-panel auth-form">
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="form login active" onsubmit="handleLogin(event)">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Sign In</button>
+        <span class="switch" onclick="showRegister()">No account? Register</span>
+      </form>
+
+      <!-- REGISTER FORM -->
+      <form id="registerForm" class="form register" onsubmit="handleRegister(event)">
+        <h2>Create Account</h2>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+
+        <button type="submit">Register</button>
+        <span class="switch" onclick="showLogin()">Already have an account? Login</span>
+      </form>
+
+      <!-- ADMIN LOGIN FORM -->
+      <form id="adminForm" class="form admin-login" onsubmit="handleAdminLogin(event)">
+        <h2>Admin Login</h2>
+        <input type="text" id="adminIdentifier" placeholder="Email or Username" required>
+        <input type="password" id="adminPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <span class="switch" onclick="showLogin()">Back to User Login</span>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ADMIN DASHBOARD ================= -->
+<section id="adminDashboard" class="admin-dashboard">
+  <!-- Sidebar -->
+  <aside class="admin-sidebar">
+    <div class="sidebar-header">
+      <h3>Admin Panel</h3>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a href="#" class="active" onclick="showSection('dashboard')">
+        <i class="fas fa-tachometer-alt"></i> Dashboard
+      </a></li>
+      <li><a href="#" onclick="showSection('users')">
+        <i class="fas fa-users"></i> Manage Users
+      </a></li>
+      <li><a href="#" onclick="showSection('franchise')">
+        <i class="fas fa-handshake"></i> Franchise
+      </a></li>
+      <li><a href="#" onclick="showSection('announcements')">
+        <i class="fas fa-bullhorn"></i> Announcements
+      </a></li>
+      <li><a href="#" onclick="showSection('settings')">
+        <i class="fas fa-cog"></i> Settings
+      </a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="admin-main">
+    <div class="admin-header">
+      <h1>Dashboard Overview</h1>
+      <div class="admin-actions">
+        <button onclick="refreshData()">
+          <i class="fas fa-sync-alt"></i> Refresh
+        </button>
+        <button onclick="logout()">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard" class="content-section active">
+      <div class="stats-grid">
+        <div class="stat-card users">
+          <div class="icon"><i class="fas fa-users"></i></div>
+          <h3 id="totalUsers">1,248</h3>
+          <p>Total Users</p>
+        </div>
+        <div class="stat-card franchise">
+          <div class="icon"><i class="fas fa-handshake"></i></div>
+          <h3 id="totalFranchise">36</h3>
+          <p>Franchise Leads</p>
+        </div>
+        <div class="stat-card announcements">
+          <div class="icon"><i class="fas fa-bullhorn"></i></div>
+          <h3 id="totalAnnouncements">4</h3>
+          <p>Active Announcements</p>
+        </div>
+        <div class="stat-card revenue">
+          <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+          <h3 id="totalRevenue">₹2.4M</h3>
+          <p>Monthly Revenue</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Users Section -->
+    <div id="users" class="content-section">
+      <h2>Manage Users</h2>
+      <button onclick="addUser()" style="margin-bottom: 20px;">
+        <i class="fas fa-plus"></i> Add New User
+      </button>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="usersTable">
+          <!-- Dynamic content -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Franchise Section -->
+    <div id="franchise" class="content-section">
+      <h2>Franchise Management</h2>
+      <button onclick="addFranchise()" style="margin-bottom: 20px;">
+        <i class="fas fa-plus"></i> Add Franchise
+      </button>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Revenue</th>
+          </tr>
+        </thead>
+        <tbody id="franchiseTable">
+          <!-- Dynamic content -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Announcements Section -->
+    <div id="announcements" class="content-section">
+      <h2>Announcements</h2>
+      <button onclick="addAnnouncement()" style="margin-bottom: 20px;">
+        <i class="fas fa-plus"></i> New Announcement
+      </button>
+      <div id="announcementsList">
+        <!-- Dynamic content -->
+      </div>
+    </div>
+
+    <!-- Settings Section -->
+    <div id="settings" class="content-section">
+      <h2>System Settings</h2>
+      <form class="admin-form">
+        <div class="form-group">
+          <label>Site Name</label>
+          <input type="text" value="Tatito" id="siteName">
+        </div>
+        <div class="form-group">
+          <label>Support Email</label>
+          <input type="email" value="support@tatito.com" id="supportEmail">
+        </div>
+        <div class="form-group">
+          <label>Maintenance Mode</label>
+          <select id="maintenanceMode">
+            <option value="false">Disabled</option>
+            <option value="true">Enabled</option>
+          </select>
+        </div>
+        <button type="button" onclick="saveSettings()">Save Settings</button>
+      </form>
+    </div>
+  </main>
+</section>
+
+
+
+
+<script src="scripts.js">
+</script>
+</body>
+</html>
