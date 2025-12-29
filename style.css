@@ -1389,6 +1389,7 @@ background: rgba(5, 197, 207, 0.75);
 /* ==================================================
    POPUP OVERLAY
 ================================================== */
+
 .popup {
   position: fixed;
   inset: 0;
@@ -1603,6 +1604,60 @@ margin-top:50px;
     width: 38px;
     height: 38px;
     font-size: 26px;
+  }
+}
+
+
+/* ==================================================
+   MOBILE FIX — FULL RESPONSIVE POPUP
+================================================== */
+@media (max-width: 480px) {
+
+  /* RESET DESKTOP OFFSETS */
+  .popup-content {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+
+    margin: 0 !important;          /* 🔥 fixes right-side cut */
+    border-radius: 0 !important;
+
+    transform: none !important;    /* remove scale / translate */
+    animation: none !important;
+  }
+
+  /* HEADER */
+  .popup-header {
+    padding: 48px 18px 18px;
+    text-align: center;
+  }
+
+  .popup-header h2 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  /* BODY */
+  .popup-body {
+    padding: 0 18px 28px;
+    overflow-y: auto;
+  }
+
+  .popup-body p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .popup-body p::first-letter {
+    font-size: 1.8rem;
+  }
+
+  /* CLOSE BUTTON */
+  .close-btn {
+    top: 14px;
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
   }
 }
 
