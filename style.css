@@ -639,6 +639,127 @@ border-radius:20px;
   width:100%;
 }
 
+/* ==================================================
+   RESPONSIVE HEADER FIX (NO OVERLAP)
+================================================== */
+
+/* -------- TABLET & BELOW -------- */
+@media (max-width: 1024px) {
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    min-height: 44px; /* critical */
+  }
+
+  .brand-text h1 {
+    font-size: 1.25rem;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  .brand-text p {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin-top: 2px;
+    opacity: 0.85;
+  }
+}
+
+/* -------- MOBILE NAV MODE -------- */
+@media (max-width: 768px) {
+
+  .header {
+    background: transparent;
+    backdrop-filter: blur(10px);
+  }
+
+  /* Fixed logo */
+  .logo-section {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 10002;
+  }
+
+  .brand {
+    align-items: center;
+  }
+
+  .brand-logo img {
+    width: 60px;
+    height: auto;
+  }
+
+  .brand-text {
+    min-height: 42px;
+  }
+
+  .brand-text h1 {
+    font-size: 1.1rem;
+    line-height: 1.1;
+    color: #fff;
+  }
+
+  .brand-text p {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* Mobile toggle */
+  .mobile-toggle {
+    display: flex;
+    position: fixed;
+    top: 18px;
+    right: 16px;
+    z-index: 10002;
+  }
+
+  /* Nav overlay */
+  .nav-content {
+    display: none;
+  }
+
+  .nav-content.active {
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,10,0.97);
+    backdrop-filter: blur(22px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+    z-index: 9999;
+  }
+}
+
+/* -------- SMALL MOBILE -------- */
+@media (max-width: 480px) {
+
+  .brand-logo img {
+    width: 52px;
+  }
+
+  .brand-text h1 {
+    font-size: 1rem;
+  }
+
+  .brand-text p {
+    font-size: 0.65rem;
+  }
+}
+
+
+
 
 /* Content & Hero */
 .content, .hero-inner {
