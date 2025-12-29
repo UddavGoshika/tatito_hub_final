@@ -157,6 +157,16 @@ body {
   transition: background 0.4s ease, color 0.4s ease;
 }
 
+/* DARK OVERLAY (controls brightness) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.112); /* 👈 adjust this */
+  pointer-events: none;
+  z-index: -1;
+}
+
 /* ================= HEADER & NAV ================= */
 /* ================= HEADER ================= */
 /* ==================================================
@@ -171,6 +181,10 @@ body {
 body {
     overflow-x: hidden;
 }
+
+
+
+
 
 /* ==================================================
    HEADER
@@ -417,10 +431,8 @@ border-radius:20px;
 ================================================== */
 .sub-nav {
     margin-top: 0.75rem;
-    padding: 0.6rem;
+    padding: 0.2rem;
     border-radius: 16px;
-    border: 1px solid var(--border-glass);
-    background: rgba(255,255,255,0.06);
     box-shadow: var(--shadow-lg);
 }
 
@@ -442,7 +454,7 @@ border-radius:20px;
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 2px 8px;
+    padding: 4px 8px;
     border-radius: 20px;
     border: 1px solid var(--border-glass);
     font-size: 0.75rem;
@@ -480,7 +492,7 @@ border-radius:20px;
 .quick-box {
     border: 1px solid var(--border-glass);
     border-radius: 6px;
-    padding: 0.35rem;
+    padding: 0.15rem;
     font-size: 0.65rem;
     text-align: center;
     cursor: pointer;
@@ -3408,7 +3420,7 @@ color:white;
       margin:0 0 12px;
       color:var(--text-primary);
     }
-    .feather-img{width: clamp(60px,8vw,80px);height:auto;opacity:.9;filter:drop-shadow(0 4px 10px rgba(0,0,0,.3));}
+    .feather-img{width: clamp(60px,8vw,80px);height:auto;opacity:.9;border-radius:20px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.3));}
 
     .eco-feather p{color:var(--text-secondary);line-height:1.7;font-size: clamp(1rem,1.2vw,1.1rem);margin:0 0 20px;}
     .eco-points{margin:0 0 24px 20px;padding:0;list-style:none;}
