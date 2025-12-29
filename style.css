@@ -1165,6 +1165,180 @@ background: rgba(5, 197, 207, 0.75);
   
 }
 
+/* =========================================================
+   SERVICE CTA SECTION
+========================================================= */
+.srv-cta {
+  text-align: center;
+  position: relative;
+}
+
+/* Optional subtle background glow */
+.srv-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(100, 200, 255, 0.15) 0%, transparent 70%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.srv-cta .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 8px 32px;
+  background: var(--bg-glass, rgba(255, 255, 255, 0.08));
+
+  border-radius: 32px;
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-soft), 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.srv-cta:hover .container {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+  border-color: var(--border-strong);
+}
+
+/* Title */
+.srv-cta h2 {
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 800;
+  margin: 0 0 24px 0;
+  background: var(--accent-gradient, linear-gradient(130deg, #60a5fa, #a78bfa));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  line-height: 1.2;
+}
+
+/* Subtitle / Description */
+.srv-cta p {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  color: var(--text-secondary);
+  opacity: 0.9;
+  max-width: 720px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+/* CTA Button */
+.srv-cta__btn {
+  display: inline-block;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 16px 40px;
+  border-radius: 50px;
+  border: 2px solid var(--border-glass);
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Hover Effect – Fill with gradient */
+.srv-cta__btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-gradient, linear-gradient(90deg, #60a5fa, #a78bfa));
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.srv-cta__btn:hover::before {
+  left: 0;
+}
+
+.srv-cta__btn:hover {
+  color: white;
+  border-color: transparent;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(96, 165, 250, 0.4);
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+========================================================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .srv-cta .container {
+    padding: 40px 28px;
+    border-radius: 28px;
+  }
+
+  .srv-cta p {
+    margin-bottom: 36px;
+  }
+}
+
+/* Small Tablets & Large Phones */
+@media (max-width: 768px) {
+  .srv-cta {
+    padding: clamp(70px, 9vw, 100px) 20px;
+  }
+
+  .srv-cta .container {
+    padding: 36px 24px;
+  }
+
+  .srv-cta__btn {
+    padding: 14px 36px;
+    font-size: 1.05rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+  .srv-cta {
+    padding: 60px 16px;
+  }
+
+  .srv-cta .container {
+    padding: 32px 20px;
+    border-radius: 24px;
+  }
+
+  .srv-cta h2 {
+    font-size: clamp(2.2rem, 7vw, 3rem);
+  }
+
+  .srv-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+  }
+
+  .srv-cta__btn {
+    padding: 14px 32px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 480px) {
+  .srv-cta .container {
+    padding: 28px 18px;
+  }
+
+  .srv-cta__btn {
+    padding: 16px 28px;
+  }
+}
+
+
 /* ================= 3. SERVICES ================= */
 .home-services {
   padding: 120px 0;
@@ -1387,7 +1561,16 @@ background: rgba(5, 197, 207, 0.75);
   transform: translateX(8px);
 }
 
+@media (max-width: 600px) {
+  .hero {
+    padding-bottom: 80px; /* Space inside hero */
+  }
 
+  .eco-heading {
+    margin-top: 100px !important;
+    margin-bottom:0px !important; /* Extra space before title */
+  }
+}
 
 /* ================= PREMIUM POPUP UI ================= */
 /* ================= POPUP OVERLAY ================= */
