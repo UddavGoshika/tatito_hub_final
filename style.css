@@ -3230,7 +3230,20 @@ color:white;
   .eco-slideshow{order:2;width:100%;max-width:100%;}
 
     }
-  
+  /* ==================================================
+   DISABLE TIMELINE ANIMATION ON MOBILE
+================================================== */
+@media (max-width: 768px) {
+
+  .eco-step {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+}
+
+
 /* ================= FRANCHISE MAIN WRAPPER ================= */
 .franchise-container {
   max-width: 1200px;
