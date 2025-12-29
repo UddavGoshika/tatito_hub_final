@@ -1,0 +1,324 @@
+:root{
+
+  --border-glass: rgba(255, 255, 255, 0.6);
+  --border-strong: rgba(255, 255, 255, 0.4);
+}
+/* ===============================
+   PROFILE CARD (WRAPPER)
+================================ */
+.profile-card {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;                 /* center instead of margin-left */
+    padding: clamp(1rem, 2.5vw, 2rem);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff;
+    font-family: system-ui, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Optional inner card */
+.profile-card-mini {
+    border-radius: 14px;
+    padding: clamp(1.2rem, 2.5vw, 2rem);
+    margin: 10px 0;
+    border: 1px solid var(--border-glass);
+}
+
+/* ===============================
+   TOP SECTION
+================================ */
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    flex-wrap: wrap;
+}
+
+/* ===============================
+   IMAGE
+================================ */
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: clamp(90px, 15vw, 150px);
+    height: clamp(90px, 15vw, 150px);
+    border-radius: 14px;
+    object-fit: cover;
+    border: 1px solid #3a3f5c;
+    display: block;
+}
+
+/* ===============================
+   DETAILS
+================================ */
+.profile-details {
+    flex: 1;
+    min-width: 220px;
+}
+
+.profile-details h2 {
+    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    margin-bottom: 0.25rem;
+    color: #fff;
+}
+
+.designation {
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.profile-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    opacity: 0.85;
+}
+
+.profile-meta li {
+    margin-bottom: 0.25rem;
+}
+
+/* ===============================
+   DESCRIPTION
+================================ */
+.profile-description {
+    margin-top: 1.2rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid #2b2f45;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* ===============================
+   TABLET
+================================ */
+@media (max-width: 768px) {
+    .profile-top {
+        gap: 1.5rem;
+    }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 480px) {
+
+    .profile-card {
+        padding: 1.2rem;
+    }
+
+    .profile-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-details {
+        min-width: 100%;
+    }
+
+    .profile-description {
+        text-align: left;
+    }
+
+
+    .profile-image img {
+    width: 80px;      /* smaller width */
+    height: 80px;     /* smaller height */
+    border-radius: 12px;
+  }
+}
+
+
+
+
+
+
+/* about out team ..... */
+
+
+
+.person-card {
+    width: 280px;
+    background: #0b0f1a00;
+    border: 1px solid #2b2f45;
+    border-radius: 16px;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-family: system-ui, sans-serif;
+}
+
+/* IMAGE */
+.person-image img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3a3f5c;
+    margin-bottom: 0.75rem;
+}
+
+/* DETAILS */
+.person-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.role {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.person-info small {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-top: 0.3rem;
+}
+
+/* ABOUT */
+.person-about {
+    margin-top: 0.8rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid #2b2f45;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+
+
+.applyforalways{
+
+display:flex;
+
+}
+
+
+/* ===============================
+   TEAM TESTIMONIALS SECTION
+================================ */
+.team-testimonials {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(40px, 6vw, 80px) 20px;
+  text-align: center;
+}
+
+/* Title */
+.team-testimonials__title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+  
+  -webkit-background-clip: text;
+  color: white;
+}
+
+/* Subtitle */
+.team-testimonials__subtitle {
+  font-size: 1rem;
+  opacity: 0.8;
+  max-width: 620px;
+  margin: 0 auto 50px;
+}
+
+/* Grid */
+.team-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Card */
+.team-testimonial {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-align: left;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.team-testimonial:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* Quote */
+.team-testimonial__quote {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.team-testimonial__quote::before {
+  content: "“";
+  font-size: 3rem;
+  position: absolute;
+  left: -8px;
+  top: -10px;
+  color: #60a5fa;
+  opacity: 0.4;
+}
+
+/* Author */
+.team-testimonial__author strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.team-testimonial__author span {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 480px) {
+  .team-testimonials {
+    padding: 40px 16px;
+  }
+
+  .team-testimonial {
+    padding: 22px 18px;
+  }
+
+  .team-testimonial__quote {
+    font-size: 0.9rem;
+  }
+}
+
+/* .srv-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 10px;
+} */
+/* 
+.feature-column h4 {
+  
+  margin-bottom: 10px;
+}
+
+.feature-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-column ul li {
+  margin-bottom: 8px;
+} */
+
