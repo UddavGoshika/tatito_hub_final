@@ -1,4 +1,14 @@
 
+
+
+
+
+
+
+
+
+
+
 function initAnimations() {
   const io = new IntersectionObserver(entries => {
     entries.forEach(entry => {
